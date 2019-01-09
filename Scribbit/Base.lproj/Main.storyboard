@@ -104,6 +104,26 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqC-FC-82E">
+                                <rect key="frame" x="87.5" y="567" width="200" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="SzY-FK-FYt"/>
+                                    <constraint firstAttribute="height" constant="50" id="zTM-ET-H8L"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Log In">
+                                    <color key="titleColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -112,11 +132,13 @@
                             <constraint firstItem="3Es-xe-cvd" firstAttribute="top" secondItem="L5w-lN-nVY" secondAttribute="bottom" constant="20" id="B6C-ip-BSi"/>
                             <constraint firstItem="3Es-xe-cvd" firstAttribute="leading" secondItem="8NT-AI-SHy" secondAttribute="leading" constant="50" id="CFZ-nJ-vr3"/>
                             <constraint firstItem="ZO3-MC-7qP" firstAttribute="top" secondItem="8NT-AI-SHy" secondAttribute="top" constant="50" id="F5X-BJ-dHv"/>
+                            <constraint firstItem="8NT-AI-SHy" firstAttribute="bottom" secondItem="rqC-FC-82E" secondAttribute="bottom" constant="50" id="GPu-2p-coU"/>
                             <constraint firstItem="L5w-lN-nVY" firstAttribute="top" secondItem="ZO3-MC-7qP" secondAttribute="bottom" constant="20" id="Rc9-zS-De2"/>
                             <constraint firstItem="8NT-AI-SHy" firstAttribute="trailing" secondItem="L5w-lN-nVY" secondAttribute="trailing" constant="50" id="bIW-hB-CVg"/>
                             <constraint firstItem="dFw-Zy-Z1h" firstAttribute="top" secondItem="3Es-xe-cvd" secondAttribute="bottom" constant="20" id="dxe-pd-GH9"/>
                             <constraint firstItem="dFw-Zy-Z1h" firstAttribute="leading" secondItem="8NT-AI-SHy" secondAttribute="leading" constant="50" id="gEK-w6-yto"/>
                             <constraint firstItem="ZO3-MC-7qP" firstAttribute="leading" secondItem="8NT-AI-SHy" secondAttribute="leading" constant="50" id="hog-sc-Dag"/>
+                            <constraint firstItem="rqC-FC-82E" firstAttribute="centerX" secondItem="Cd3-3o-VD2" secondAttribute="centerX" id="vhZ-BC-6en"/>
                             <constraint firstItem="8NT-AI-SHy" firstAttribute="trailing" secondItem="dFw-Zy-Z1h" secondAttribute="trailing" constant="50" id="xR6-ky-ivE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8NT-AI-SHy"/>
