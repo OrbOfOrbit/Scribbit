@@ -11,10 +11,18 @@ import Firebase
 
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var signup: UIButton!
+    @IBOutlet var background: UIView!
+    @IBOutlet weak var login: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        background.backgroundColor = colorChoices.bgColor
+        
+        signup.backgroundColor = colorChoices.fgColor
+        signup.titleLabel?.textColor = colorChoices.bgColor
+        
     }
 
     override func didReceiveMemoryWarning() {
