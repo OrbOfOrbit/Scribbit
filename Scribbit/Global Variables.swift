@@ -15,7 +15,8 @@ class colorChoices{
   
     public static var bgColor :UIColor{
         get{
-            return UIColor.init(red: 115, green: 250, blue: 145, alpha: 100)
+            return UIColor.init(red: 115/255, green: 250/255, blue: 145/255, alpha: 100)
+            
         }
     }
     
