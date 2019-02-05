@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>487335137622-u0435opeo5cs923tkfov2j2n1as9j5rv.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.487335137622-u0435opeo5cs923tkfov2j2n1as9j5rv</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB52pMDdtWoEfmgz8ml05XydO2NqTJStOs</string>
+	<key>GCM_SENDER_ID</key>
+	<string>487335137622</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Urine-Good-Company.Scribbit</string>
+	<key>PROJECT_ID</key>
+	<string>scribbit-7cd18</string>
+	<key>STORAGE_BUCKET</key>
+	<string>scribbit-7cd18.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:487335137622:ios:38cd0de42876ed6a</string>
+	<key>DATABASE_URL</key>
+	<string>https://scribbit-7cd18.firebaseio.com</string>
+</dict>
+</plist>

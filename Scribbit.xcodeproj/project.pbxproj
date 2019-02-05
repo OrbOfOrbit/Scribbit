@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		0A70E39121DFD94100D25861 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A70E39021DFD94100D25861 /* GoogleService-Info.plist */; };
 		51DF1B48A339845513C14C8C /* Pods_Scribbit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9249620E5589A3B7EAE1587F /* Pods_Scribbit.framework */; };
+		B32B8F2D2200CC24005BFE06 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32B8F2C2200CC24005BFE06 /* LogInViewController.swift */; };
+		B32B8F2F2200CC98005BFE06 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32B8F2E2200CC98005BFE06 /* SignUpViewController.swift */; };
+		B33C24382208BC0600AC8930 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B33C24372208BC0600AC8930 /* GoogleService-Info.plist */; };
+		B3D52C2C21F10B8E008C9084 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D52C2B21F10B8E008C9084 /* Item.swift */; };
+		B3D52C2E21F10BD7008C9084 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D52C2D21F10BD7008C9084 /* List.swift */; };
 		C2D3DA7721DE7D0E009904BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D3DA7621DE7D0E009904BF /* AppDelegate.swift */; };
 		C2D3DA7921DE7D0E009904BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D3DA7821DE7D0E009904BF /* ViewController.swift */; };
 		C2D3DA7C21DE7D0E009904BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2D3DA7A21DE7D0E009904BF /* Main.storyboard */; };
@@ -39,6 +44,11 @@
 		0A70E39021DFD94100D25861 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		917CBED20CCF3966642404EA /* Pods-Scribbit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scribbit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Scribbit/Pods-Scribbit.debug.xcconfig"; sourceTree = "<group>"; };
 		9249620E5589A3B7EAE1587F /* Pods_Scribbit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scribbit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B32B8F2C2200CC24005BFE06 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		B32B8F2E2200CC98005BFE06 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		B33C24372208BC0600AC8930 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B3D52C2B21F10B8E008C9084 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		B3D52C2D21F10BD7008C9084 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		C2D3DA7321DE7D0E009904BF /* Scribbit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scribbit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2D3DA7621DE7D0E009904BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2D3DA7821DE7D0E009904BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +58,6 @@
 		C2D3DA8221DE7D10009904BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2D3DA8721DE7D10009904BF /* ScribbitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScribbitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2D3DA8B21DE7D10009904BF /* ScribbitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScribbitTests.swift; sourceTree = "<group>"; };
-		C2D3DA8D21DE7D10009904BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2D3DA9221DE7D10009904BF /* ScribbitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScribbitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2D3DA9621DE7D10009904BF /* ScribbitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScribbitUITests.swift; sourceTree = "<group>"; };
 		C2D3DA9821DE7D10009904BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -130,6 +139,10 @@
 				0A70E39021DFD94100D25861 /* GoogleService-Info.plist */,
 				C2D3DA7F21DE7D10009904BF /* LaunchScreen.storyboard */,
 				C2D3DA8221DE7D10009904BF /* Info.plist */,
+				B3D52C2B21F10B8E008C9084 /* Item.swift */,
+				B3D52C2D21F10BD7008C9084 /* List.swift */,
+				B32B8F2C2200CC24005BFE06 /* LogInViewController.swift */,
+				B32B8F2E2200CC98005BFE06 /* SignUpViewController.swift */,
 			);
 			path = Scribbit;
 			sourceTree = "<group>";
@@ -138,7 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				C2D3DA8B21DE7D10009904BF /* ScribbitTests.swift */,
-				C2D3DA8D21DE7D10009904BF /* Info.plist */,
+				B33C24372208BC0600AC8930 /* GoogleService-Info.plist */,
 			);
 			path = ScribbitTests;
 			sourceTree = "<group>";
@@ -269,6 +282,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B33C24382208BC0600AC8930 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,7 +345,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B32B8F2F2200CC98005BFE06 /* SignUpViewController.swift in Sources */,
 				C2D3DA7921DE7D0E009904BF /* ViewController.swift in Sources */,
+				B3D52C2E21F10BD7008C9084 /* List.swift in Sources */,
+				B3D52C2C21F10B8E008C9084 /* Item.swift in Sources */,
+				B32B8F2D2200CC24005BFE06 /* LogInViewController.swift in Sources */,
 				C2D3DA7721DE7D0E009904BF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
