@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B5y-VV-YMw">
-                                <rect key="frame" x="87" y="470" width="200" height="50"/>
+                                <rect key="frame" x="87.5" y="470" width="200" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="Iff-W2-KSb"/>
@@ -39,7 +39,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5nd-En-4GE">
-                                <rect key="frame" x="87" y="570" width="200" height="50"/>
+                                <rect key="frame" x="87.5" y="570" width="200" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="WUB-oE-7fB"/>
@@ -72,10 +72,10 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="n9a-cf-5nI">
             <objects>
-                <viewController id="ssE-h4-elW" sceneMemberID="viewController">
+                <viewController id="ssE-h4-elW" customClass="LoginViewController" customModule="Scribbit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cd3-3o-VD2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -123,6 +123,9 @@
                                         <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginButtonTouchedUpInside:" destination="ssE-h4-elW" eventType="touchUpInside" id="CxU-Az-xhW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -143,21 +146,26 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8NT-AI-SHy"/>
                     </view>
+                    <connections>
+                        <outlet property="loginButton" destination="rqC-FC-82E" id="YqA-Kb-eFX"/>
+                        <outlet property="passwordTextField" destination="dFw-Zy-Z1h" id="Jz7-RE-Igx"/>
+                        <outlet property="userNameTextField" destination="L5w-lN-nVY" id="dKo-Wr-72L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="coM-gQ-u8p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1471" y="-120"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="9H0-Jq-U90">
             <objects>
-                <viewController id="OWC-2h-0bE" sceneMemberID="viewController">
+                <viewController id="OWC-2h-0bE" customClass="SignUpViewController" customModule="Scribbit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qrf-41-m6Q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQP-3r-zSj">
-                                <rect key="frame" x="87" y="537" width="200" height="50"/>
+                                <rect key="frame" x="87.5" y="537" width="200" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <bool key="isElement" value="NO"/>
@@ -175,6 +183,9 @@
                                         <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="signUpButtonTouchedUp:" destination="OWC-2h-0bE" eventType="touchUpInside" id="yox-Lg-jnP"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yQ-Xz-FIL">
                                 <rect key="frame" x="50" y="70" width="113" height="27"/>
@@ -235,6 +246,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="83r-5h-69f"/>
                     </view>
+                    <connections>
+                        <outlet property="emailAddressTextField" destination="1ul-xt-cgR" id="jAN-Cw-85a"/>
+                        <outlet property="passwordTextField" destination="9tK-Br-Rkp" id="3ep-WD-mqN"/>
+                        <outlet property="signUpButton" destination="SQP-3r-zSj" id="4ZR-uq-n3a"/>
+                        <outlet property="userNameTextField" destination="WeD-VL-N8J" id="Bps-Mw-BSR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y0w-Er-Dmw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

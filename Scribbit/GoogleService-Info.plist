@@ -7,34 +7,34 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>125876039399-ci252h0o7j9qkb34t15jibpi7q2ifs51.apps.googleusercontent.com</string>
+	<string>487335137622-u0435opeo5cs923tkfov2j2n1as9j5rv.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.125876039399-ci252h0o7j9qkb34t15jibpi7q2ifs51</string>
+	<string>com.googleusercontent.apps.487335137622-u0435opeo5cs923tkfov2j2n1as9j5rv</string>
 	<key>API_KEY</key>
-	<string>AIzaSyD6itqEQbTjteRL6A0zHM2vuwYN_K9ZYPQ</string>
+	<string>AIzaSyB52pMDdtWoEfmgz8ml05XydO2NqTJStOs</string>
 	<key>GCM_SENDER_ID</key>
-	<string>125876039399</string>
+	<string>487335137622</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>Urine-Good-Company.Scribbit</string>
 	<key>PROJECT_ID</key>
-	<string>scribbit-471e0</string>
+	<string>scribbit-7cd18</string>
 	<key>STORAGE_BUCKET</key>
-	<string>scribbit-471e0.appspot.com</string>
+	<string>scribbit-7cd18.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_APPINVITE_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_GCM_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:125876039399:ios:38cd0de42876ed6a</string>
+	<string>1:487335137622:ios:38cd0de42876ed6a</string>
 	<key>DATABASE_URL</key>
-	<string>https://scribbit-471e0.firebaseio.com</string>
+	<string>https://scribbit-7cd18.firebaseio.com</string>
 </dict>
 </plist>
