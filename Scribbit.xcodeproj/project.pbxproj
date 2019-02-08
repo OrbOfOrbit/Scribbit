@@ -11,6 +11,7 @@
 		51DF1B48A339845513C14C8C /* Pods_Scribbit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9249620E5589A3B7EAE1587F /* Pods_Scribbit.framework */; };
 		9E2C81B322027D3E006E11AC /* list.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2C81B222027D3E006E11AC /* list.swift */; };
 		9E2C81B522027EEC006E11AC /* item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2C81B422027EEC006E11AC /* item.swift */; };
+		9E3DC823220D1FAC00EA54F9 /* editviewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3DC822220D1FAB00EA54F9 /* editviewcontroller.swift */; };
 		C2D3DA7721DE7D0E009904BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D3DA7621DE7D0E009904BF /* AppDelegate.swift */; };
 		C2D3DA7921DE7D0E009904BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D3DA7821DE7D0E009904BF /* ViewController.swift */; };
 		C2D3DA7C21DE7D0E009904BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2D3DA7A21DE7D0E009904BF /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		9249620E5589A3B7EAE1587F /* Pods_Scribbit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scribbit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E2C81B222027D3E006E11AC /* list.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = list.swift; sourceTree = "<group>"; };
 		9E2C81B422027EEC006E11AC /* item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = item.swift; sourceTree = "<group>"; };
+		9E3DC822220D1FAB00EA54F9 /* editviewcontroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = editviewcontroller.swift; sourceTree = "<group>"; };
 		C2D3DA7321DE7D0E009904BF /* Scribbit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scribbit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2D3DA7621DE7D0E009904BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2D3DA7821DE7D0E009904BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				0A70E39021DFD94100D25861 /* GoogleService-Info.plist */,
 				C2D3DA7F21DE7D10009904BF /* LaunchScreen.storyboard */,
 				C2D3DA8221DE7D10009904BF /* Info.plist */,
+				9E3DC822220D1FAB00EA54F9 /* editviewcontroller.swift */,
 				9E2C81B222027D3E006E11AC /* list.swift */,
 				9E2C81B422027EEC006E11AC /* item.swift */,
 			);
@@ -341,6 +344,7 @@
 				C2D3DA7921DE7D0E009904BF /* ViewController.swift in Sources */,
 				C2D3DA7721DE7D0E009904BF /* AppDelegate.swift in Sources */,
 				9E2C81B322027D3E006E11AC /* list.swift in Sources */,
+				9E3DC823220D1FAC00EA54F9 /* editviewcontroller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
