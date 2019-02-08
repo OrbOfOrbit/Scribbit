@@ -13,6 +13,9 @@
 		9E2C81B522027EEC006E11AC /* item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2C81B422027EEC006E11AC /* item.swift */; };
 		9E3DC823220D1FAC00EA54F9 /* editviewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3DC822220D1FAB00EA54F9 /* editviewcontroller.swift */; };
 		9EEC58FB220DD6C000ADE9EA /* list.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EEC58FA220DD6C000ADE9EA /* list.storyboard */; };
+		9EF9F1C9220DE3C400B1A238 /* item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF9F1C8220DE3C400B1A238 /* item.swift */; };
+		9EF9F1D1220DFA3700B1A238 /* itemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF9F1D0220DFA3700B1A238 /* itemViewController.swift */; };
+		9EF9F1D3220DFA3C00B1A238 /* itemedit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EF9F1D2220DFA3C00B1A238 /* itemedit.storyboard */; };
 		C2D3DA7721DE7D0E009904BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D3DA7621DE7D0E009904BF /* AppDelegate.swift */; };
 		C2D3DA7921DE7D0E009904BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D3DA7821DE7D0E009904BF /* ViewController.swift */; };
 		C2D3DA7C21DE7D0E009904BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2D3DA7A21DE7D0E009904BF /* Main.storyboard */; };
@@ -47,6 +50,9 @@
 		9E2C81B422027EEC006E11AC /* item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = item.swift; sourceTree = "<group>"; };
 		9E3DC822220D1FAB00EA54F9 /* editviewcontroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = editviewcontroller.swift; sourceTree = "<group>"; };
 		9EEC58FA220DD6C000ADE9EA /* list.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = list.storyboard; sourceTree = "<group>"; };
+		9EF9F1C8220DE3C400B1A238 /* item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = item.swift; sourceTree = "<group>"; };
+		9EF9F1D0220DFA3700B1A238 /* itemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = itemViewController.swift; sourceTree = "<group>"; };
+		9EF9F1D2220DFA3C00B1A238 /* itemedit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = itemedit.storyboard; sourceTree = "<group>"; };
 		C2D3DA7321DE7D0E009904BF /* Scribbit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scribbit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2D3DA7621DE7D0E009904BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2D3DA7821DE7D0E009904BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -139,8 +145,11 @@
 				C2D3DA7F21DE7D10009904BF /* LaunchScreen.storyboard */,
 				C2D3DA8221DE7D10009904BF /* Info.plist */,
 				9E3DC822220D1FAB00EA54F9 /* editviewcontroller.swift */,
+				9EF9F1D2220DFA3C00B1A238 /* itemedit.storyboard */,
 				9E2C81B222027D3E006E11AC /* list.swift */,
+				9EF9F1D0220DFA3700B1A238 /* itemViewController.swift */,
 				9E2C81B422027EEC006E11AC /* item.swift */,
+				9EF9F1C8220DE3C400B1A238 /* item.swift */,
 				9EEC58FA220DD6C000ADE9EA /* list.storyboard */,
 			);
 			path = Scribbit;
@@ -271,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A70E39121DFD94100D25861 /* GoogleService-Info.plist in Resources */,
+				9EF9F1D3220DFA3C00B1A238 /* itemedit.storyboard in Resources */,
 				9EEC58FB220DD6C000ADE9EA /* list.storyboard in Resources */,
 				C2D3DA8121DE7D10009904BF /* LaunchScreen.storyboard in Resources */,
 				C2D3DA7E21DE7D10009904BF /* Assets.xcassets in Resources */,
@@ -346,8 +356,10 @@
 			files = (
 				9E2C81B522027EEC006E11AC /* item.swift in Sources */,
 				C2D3DA7921DE7D0E009904BF /* ViewController.swift in Sources */,
+				9EF9F1D1220DFA3700B1A238 /* itemViewController.swift in Sources */,
 				C2D3DA7721DE7D0E009904BF /* AppDelegate.swift in Sources */,
 				9E2C81B322027D3E006E11AC /* list.swift in Sources */,
+				9EF9F1C9220DE3C400B1A238 /* item.swift in Sources */,
 				9E3DC823220D1FAC00EA54F9 /* editviewcontroller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
