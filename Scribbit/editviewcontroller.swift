@@ -8,8 +8,9 @@
 
 import UIKit
 
-class tableViewController: UITableViewController  {
+class editViewController: UITableViewController  {
     //@IBOutlet var tableview: UITableView!
+    @IBOutlet var tableview: UITableView!
     let basicarray = [item(newcontent: "s", newdone: false, newsubitems: [item]()), item(newcontent: "b", newdone: false, newsubitems: [item]())]
     var basicitem : item = item(newcontent: "", newdone: true, newsubitems: [item]())
     var basiclist = list(newitems: [item](), newtitle: "", newcreated: Date.init())
