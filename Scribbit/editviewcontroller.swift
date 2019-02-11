@@ -8,13 +8,19 @@
 
 import UIKit
 
-class editViewController: UITableViewController  {
+class editViewController: UITableViewController, passsbackitem {
+    
+    
     //@IBOutlet var tableview: UITableView!
    
     @IBOutlet var tableview: UITableView!
     let basicarray = [item(newcontent: "s", newdone: false, newsubitems: [item]()), item(newcontent: "b", newdone: false, newsubitems: [item]())]
     var basicitem : item = item(newcontent: "", newdone: true, newsubitems: [item]())
     var basiclist = list(newitems: [item](), newtitle: "", newcreated: Date.init())
+    func passbackitem(value: item) {
+    }
+    func passbackname(value: String) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         basicitem = item(newcontent: "i love fortnite and video games", newdone: false, newsubitems: basicarray)
@@ -52,7 +58,7 @@ class editViewController: UITableViewController  {
                 self.tableView.reloadData()
             }
         }
-        else{
+      /*  else{
             let alert = UIAlertController(title: "item", message: "", preferredStyle: .alert)
             alert.addTextField { (textField) in
                 textField.text = self.basiclist.items[indexPath.row-1].content
@@ -67,6 +73,12 @@ class editViewController: UITableViewController  {
         }
         DispatchQueue.main.async {
             self.tableView.reloadData()
+        }*/
+        else{
+            let controller = itemViewController()
+            controller.itemtoedit = basiclist.items[indexPath.row-1]
+            self.present(controller, animated: true, completion: nil)
+
         }
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
