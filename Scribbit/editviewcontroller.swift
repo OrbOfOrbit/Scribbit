@@ -98,16 +98,18 @@ class editViewController: UITableViewController  {
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]?
     {
         // 1
+        //change "UITableViewRowActionStyle.default" to "UITableViewRowAction.Style.default"
         if indexPath.row != 0 && indexPath.row != basiclist.items.count+1{
-            let doneaction = UITableViewRowAction(style: UITableViewRowAction.Style.default, title: "done" , handler: { (action:UITableViewRowAction, indexPath: IndexPath) -> Void in
+            let doneaction = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "done" , handler: { (action:UITableViewRowAction, indexPath: IndexPath) -> Void in
                 self.basiclist.items[indexPath.row-1].done = true
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
+                    
                 }
                 
             })
             // 3
-            let notdoneaction = UITableViewRowAction(style: UITableViewRowAction.Style.default, title: "not done" , handler: { (action:UITableViewRowAction, indexPath:IndexPath) -> Void in
+            let notdoneaction = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "not done" , handler: { (action:UITableViewRowAction, indexPath:IndexPath) -> Void in
                 self.basiclist.items[indexPath.row-1].done = false
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
