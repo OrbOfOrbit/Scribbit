@@ -37,6 +37,9 @@ class editViewController: UITableViewController, passsbackitem {
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
                 let textField = alert!.textFields![0]
                 self.basiclist.title = textField.text!
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
             }))
             self.present(alert, animated: true, completion: nil)
             DispatchQueue.main.async {
@@ -50,10 +53,15 @@ class editViewController: UITableViewController, passsbackitem {
             }
             alert.addAction(UIAlertAction(title: "add", style: .default, handler: { [weak alert] (_) in
                 self.basiclist.items.append(item(newcontent: (alert?.textFields![0].text)!, newdone: false, newsubitems: [item]()))
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
                 }
             ))
             self.present(alert, animated: true, completion: nil)
             
+            
+
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
@@ -78,7 +86,16 @@ class editViewController: UITableViewController, passsbackitem {
             let controller = itemViewController()
             controller.itemtoedit = basiclist.items[indexPath.row-1]
             self.present(controller, animated: true, completion: nil)
+            controller.callback = { result in
+                self.basiclist.items[indexPath.row-1] = result
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
 
+        }
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
         }
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

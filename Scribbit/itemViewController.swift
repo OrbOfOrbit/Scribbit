@@ -13,6 +13,7 @@ class itemViewController: UIViewController, UITableViewDataSource,UITableViewDel
     var myTableView:UITableView!
     var titletext:UITextField!
     var exitbutton:UIButton!
+    var callback : ((item)->())?
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemtoedit.subitems.count+1
     }
@@ -24,12 +25,46 @@ class itemViewController: UIViewController, UITableViewDataSource,UITableViewDel
         }
         else {
             cell?.textLabel?.text = itemtoedit.subitems[indexPath.row].content
+            if itemtoedit.subitems[indexPath.row].done == true{
+                cell?.textLabel?.text?.append("[✓]")
+                cell?.setNeedsDisplay()
+            }
+            else{
+                cell?.textLabel?.text?.append("[X]")
+                cell?.setNeedsDisplay()
+            }
         }
         return cell!
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == itemtoedit.subitems.count{
+            let alert = UIAlertController(title: "new item", message: "", preferredStyle: .alert)
+            alert.addTextField { (textField) in
+                textField.text = "item name"
+            }
+            alert.addAction(UIAlertAction(title: "add", style: .default, handler: { [weak alert] (_) in
+                self.itemtoedit.subitems.append(item(newcontent: (alert?.textFields![0].text)!, newdone: false, newsubitems: [item]()))
+                DispatchQueue.main.async {
+                    tableView.reloadData()
+                }
+                }
+            ))
+            self.present(alert, animated: true, completion: nil)
             
+        }
+        else{
+            let alert = UIAlertController(title: "item name change", message: "", preferredStyle: .alert)
+            alert.addTextField { (textField) in
+                textField.text = self.itemtoedit.subitems[indexPath.row].content
+            }
+            alert.addAction(UIAlertAction(title: "add", style: .default, handler: { [weak alert] (_) in
+                self.itemtoedit.subitems[indexPath.row].content = (alert?.textFields![0].text)!
+                DispatchQueue.main.async {
+                    tableView.reloadData()
+                }
+                }
+            ))
+              self.present(alert, animated: true, completion: nil)
         }
     }
     
@@ -58,11 +93,34 @@ class itemViewController: UIViewController, UITableViewDataSource,UITableViewDel
         self.view.addSubview(exitbutton)
         // Do any additional setup after loading the view.
     }
-    
+
+   
      @objc func buttonClicked(sender : UIButton){
+        callback!(item(newcontent: titletext.text ?? itemtoedit.content, newdone: itemtoedit.done, newsubitems: itemtoedit.subitems))
         self.dismiss(animated: true, completion: nil)
     }
-    
+   func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]?
+    {
+        // 1
+        if indexPath.row != itemtoedit.subitems.count+1{
+            let doneaction = UITableViewRowAction(style: UITableViewRowAction.Style.default, title: "done" , handler: { (action:UITableViewRowAction, indexPath: IndexPath) -> Void in
+                self.itemtoedit.subitems[indexPath.row].done = true
+                DispatchQueue.main.async {
+                    self.myTableView.reloadData()
+                }
+                
+            })
+            // 3
+            let notdoneaction = UITableViewRowAction(style: UITableViewRowAction.Style.default, title: "not done" , handler: { (action:UITableViewRowAction, indexPath:IndexPath) -> Void in
+                self.itemtoedit.subitems[indexPath.row].done = false
+                DispatchQueue.main.async {
+                    self.myTableView.reloadData()
+                }
+            })
+            // 5
+            return [doneaction,notdoneaction]}
+        return [UITableViewRowAction]()
+    }
 
     /*
     // MARK: - Navigation
