@@ -8,7 +8,7 @@
 
 import UIKit
 
-class editViewController: UITableViewController, passsbackitem {
+class editViewController: UITableViewController {
     
     
     //@IBOutlet var tableview: UITableView!
@@ -17,10 +17,6 @@ class editViewController: UITableViewController, passsbackitem {
     let basicarray = [item(newcontent: "s", newdone: false, newsubitems: [item]()), item(newcontent: "b", newdone: false, newsubitems: [item]())]
     var basicitem : item = item(newcontent: "", newdone: true, newsubitems: [item]())
     var basiclist = list(newitems: [item](), newtitle: "", newcreated: Date.init())
-    func passbackitem(value: item) {
-    }
-    func passbackname(value: String) {
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
         basicitem = item(newcontent: "i love fortnite and video games", newdone: false, newsubitems: basicarray)
@@ -113,11 +109,11 @@ class editViewController: UITableViewController, passsbackitem {
         else{
             cell?.textLabel?.text = basiclist.items[indexPath.row-1].content
             if basiclist.items[indexPath.row-1].done == true{
-                cell?.textLabel?.text?.append("[✓]")
+                cell?.textLabel?.text?.append("✅")
                 cell?.setNeedsDisplay()
             }
             else{
-                cell?.textLabel?.text?.append("[X]")
+                cell?.textLabel?.text?.append("❌")
                 cell?.setNeedsDisplay()
             }
         }

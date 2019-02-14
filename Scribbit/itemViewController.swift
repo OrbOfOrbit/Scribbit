@@ -26,11 +26,11 @@ class itemViewController: UIViewController, UITableViewDataSource,UITableViewDel
         else {
             cell?.textLabel?.text = itemtoedit.subitems[indexPath.row].content
             if itemtoedit.subitems[indexPath.row].done == true{
-                cell?.textLabel?.text?.append("[✓]")
+                cell?.textLabel?.text?.append("✅")
                 cell?.setNeedsDisplay()
             }
             else{
-                cell?.textLabel?.text?.append("[X]")
+                cell?.textLabel?.text?.append("❌")
                 cell?.setNeedsDisplay()
             }
         }
