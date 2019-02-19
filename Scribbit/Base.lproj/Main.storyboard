@@ -29,7 +29,7 @@
         <!--DisplayScreen-->
         <scene sceneID="gwn-wg-R47">
             <objects>
-                <viewController storyboardIdentifier="ListViewController" title="DisplayScreen" id="S0e-l5-xsE" customClass="DisplayScreenViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ListViewController" title="DisplayScreen" id="S0e-l5-xsE" customClass="ViewController" customModule="Scribbit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Hh-Iw-qv7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
