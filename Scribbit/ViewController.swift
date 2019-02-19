@@ -18,10 +18,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        background.backgroundColor = colorChoices.bgColor
-        
-        signup.backgroundColor = colorChoices.fgColor
-        signup.titleLabel?.textColor = colorChoices.bgColor
+//        background.backgroundColor = colorChoices.bgColor
+//        
+//        signup.backgroundColor = colorChoices.fgColor
+//        signup.titleLabel?.textColor = colorChoices.bgColor
         
     }
 

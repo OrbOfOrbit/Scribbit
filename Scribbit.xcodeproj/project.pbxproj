@@ -51,11 +51,11 @@
 /* Begin PBXFileReference section */
 		0A0B6D1D21E9251600D222F9 /* Global Variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Global Variables.swift"; sourceTree = "<group>"; };
 		0A7969D9220CAB9100B65D6F /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
-		0AE5D3962210CEC400E655D4 /* list.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = list.swift; path = "../../../Downloads/Scribbit-listbranch 2/Scribbit/list.swift"; sourceTree = "<group>"; };
-		0AE5D3972210CEC500E655D4 /* itemedit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = itemedit.storyboard; sourceTree = "<group>"; };
-		0AE5D3982210CEC500E655D4 /* item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = item.swift; path = "../../../Downloads/Scribbit-listbranch 2/Scribbit/item.swift"; sourceTree = "<group>"; };
+		0AE5D3962210CEC400E655D4 /* list.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = list.swift; path = Scribbit/list.swift; sourceTree = SOURCE_ROOT; };
+		0AE5D3972210CEC500E655D4 /* itemedit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = itemedit.storyboard; path = Scribbit/itemedit.storyboard; sourceTree = SOURCE_ROOT; };
+		0AE5D3982210CEC500E655D4 /* item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = item.swift; path = Scribbit/item.swift; sourceTree = SOURCE_ROOT; };
 		0AE5D3992210CEC500E655D4 /* itemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = itemViewController.swift; sourceTree = "<group>"; };
-		0AE5D39A2210CEC500E655D4 /* list.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = list.storyboard; path = "../../../Downloads/Scribbit-listbranch 2/Scribbit/list.storyboard"; sourceTree = "<group>"; };
+		0AE5D39A2210CEC500E655D4 /* list.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = list.storyboard; path = Scribbit/list.storyboard; sourceTree = SOURCE_ROOT; };
 		0AE5D3A02210D3CA00E655D4 /* editviewcontroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = editviewcontroller.swift; sourceTree = "<group>"; };
 		917CBED20CCF3966642404EA /* Pods-Scribbit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scribbit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Scribbit/Pods-Scribbit.debug.xcconfig"; sourceTree = "<group>"; };
 		9249620E5589A3B7EAE1587F /* Pods_Scribbit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scribbit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
