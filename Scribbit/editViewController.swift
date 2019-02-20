@@ -124,7 +124,7 @@ class editViewController: UITableViewController {
     {
         // 1
         if indexPath.row != 0 && indexPath.row != basiclist.items.count+1{
-            let doneaction = UITableViewRowAction(style: UITableViewRowAction.Style.default, title: "done" , handler: { (action:UITableViewRowAction, indexPath: IndexPath) -> Void in
+            let doneaction = UITableViewRowAction(style: .normal, title: "done" , handler: { (action:UITableViewRowAction, indexPath: IndexPath) -> Void in
                 self.basiclist.items[indexPath.row-1].done = true
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
@@ -132,7 +132,7 @@ class editViewController: UITableViewController {
                 
             })
             // 3
-            let notdoneaction = UITableViewRowAction(style: UITableViewRowAction.Style.default, title: "not done" , handler: { (action:UITableViewRowAction, indexPath:IndexPath) -> Void in
+            let notdoneaction = UITableViewRowAction(style: .normal, title: "not done" , handler: { (action:UITableViewRowAction, indexPath:IndexPath) -> Void in
                 self.basiclist.items[indexPath.row-1].done = false
                 DispatchQueue.main.async {
                     self.tableView.reloadData()

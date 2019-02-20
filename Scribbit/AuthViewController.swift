@@ -1,34 +1,36 @@
 //
-//  ViewController.swift
+//  AuthViewController.swift
 //  Scribbit
 //
-//  Created by Oron Barash (student LM) on 1/3/19.
+//  Created by Justin Cannan (student LM) on 2/7/19.
 //  Copyright © 2019 Oron Barash (student LM). All rights reserved.
 //
 
 import UIKit
-import Firebase
 
+class AuthViewController: UIViewController {
 
-class ViewController: UIViewController {
-    @IBOutlet weak var signup: UIButton!
-    @IBOutlet var background: UIView!
-    @IBOutlet weak var login: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-//        background.backgroundColor = colorChoices.bgColor
-//        
-//        signup.backgroundColor = colorChoices.fgColor
-//        signup.titleLabel?.textColor = colorChoices.bgColor
-        
+
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
@@ -39,6 +41,4 @@ class ViewController: UIViewController {
         present(vc, animated: true, completion: nil)
     }
 
-
 }
-

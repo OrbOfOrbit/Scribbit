@@ -103,7 +103,7 @@ class itemViewController: UIViewController, UITableViewDataSource,UITableViewDel
     {
         // 1
         if indexPath.row != itemtoedit.subitems.count+1{
-            let doneaction = UITableViewRowAction(style: UITableViewRowAction.Style.default, title: "done" , handler: { (action:UITableViewRowAction, indexPath: IndexPath) -> Void in
+            let doneaction = UITableViewRowAction(style: .normal, title: "done" , handler: { (action:UITableViewRowAction, indexPath: IndexPath) -> Void in
                 self.itemtoedit.subitems[indexPath.row].done = true
                 DispatchQueue.main.async {
                     self.myTableView.reloadData()
@@ -111,7 +111,7 @@ class itemViewController: UIViewController, UITableViewDataSource,UITableViewDel
                 
             })
             // 3
-            let notdoneaction = UITableViewRowAction(style: UITableViewRowAction.Style.default, title: "not done" , handler: { (action:UITableViewRowAction, indexPath:IndexPath) -> Void in
+            let notdoneaction = UITableViewRowAction(style: .normal, title: "not done" , handler: { (action:UITableViewRowAction, indexPath:IndexPath) -> Void in
                 self.itemtoedit.subitems[indexPath.row].done = false
                 DispatchQueue.main.async {
                     self.myTableView.reloadData()
