@@ -10,7 +10,6 @@
 		0A70E39121DFD94100D25861 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A70E39021DFD94100D25861 /* GoogleService-Info.plist */; };
 		51DF1B48A339845513C14C8C /* Pods_Scribbit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9249620E5589A3B7EAE1587F /* Pods_Scribbit.framework */; };
 		9E2C81B322027D3E006E11AC /* list.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2C81B222027D3E006E11AC /* list.swift */; };
-		9E2C81B522027EEC006E11AC /* item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2C81B422027EEC006E11AC /* item.swift */; };
 		9E3DC823220D1FAC00EA54F9 /* editviewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3DC822220D1FAB00EA54F9 /* editviewcontroller.swift */; };
 		9EEC58FB220DD6C000ADE9EA /* list.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EEC58FA220DD6C000ADE9EA /* list.storyboard */; };
 		9EF9F1C9220DE3C400B1A238 /* item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF9F1C8220DE3C400B1A238 /* item.swift */; };
@@ -46,7 +45,6 @@
 		917CBED20CCF3966642404EA /* Pods-Scribbit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scribbit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Scribbit/Pods-Scribbit.debug.xcconfig"; sourceTree = "<group>"; };
 		9249620E5589A3B7EAE1587F /* Pods_Scribbit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scribbit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E2C81B222027D3E006E11AC /* list.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = list.swift; sourceTree = "<group>"; };
-		9E2C81B422027EEC006E11AC /* item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = item.swift; sourceTree = "<group>"; };
 		9E3DC822220D1FAB00EA54F9 /* editviewcontroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = editviewcontroller.swift; sourceTree = "<group>"; };
 		9EEC58FA220DD6C000ADE9EA /* list.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = list.storyboard; sourceTree = "<group>"; };
 		9EF9F1C8220DE3C400B1A238 /* item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = item.swift; sourceTree = "<group>"; };
@@ -145,7 +143,6 @@
 				9E3DC822220D1FAB00EA54F9 /* editviewcontroller.swift */,
 				9E2C81B222027D3E006E11AC /* list.swift */,
 				9EF9F1D0220DFA3700B1A238 /* itemViewController.swift */,
-				9E2C81B422027EEC006E11AC /* item.swift */,
 				9EF9F1C8220DE3C400B1A238 /* item.swift */,
 				9EEC58FA220DD6C000ADE9EA /* list.storyboard */,
 			);
@@ -350,7 +347,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E2C81B522027EEC006E11AC /* item.swift in Sources */,
 				C2D3DA7921DE7D0E009904BF /* ViewController.swift in Sources */,
 				9EF9F1D1220DFA3700B1A238 /* itemViewController.swift in Sources */,
 				C2D3DA7721DE7D0E009904BF /* AppDelegate.swift in Sources */,
