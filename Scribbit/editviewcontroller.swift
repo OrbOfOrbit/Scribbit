@@ -11,8 +11,6 @@ class editViewController: UITableViewController {
     var basiclist = list(newitems: [item](), newtitle: "", newcreated: Date.init())
     override func viewDidLoad() {
         super.viewDidLoad()
-        basicitem = item(newcontent: "i love fortnite and video games", newdone: false, newsubitems: basicarray)
-        let x = [basicitem]
         //basiclist = list(newitems: x, newtitle: "basic list", newcreated: Date.init())
         // Do any additional setup after loading the view.
     }
