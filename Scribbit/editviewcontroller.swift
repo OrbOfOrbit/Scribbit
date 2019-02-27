@@ -1,7 +1,10 @@
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class editViewController: UITableViewController {
     
+    var ref: DatabaseReference?
     
     //@IBOutlet var tableview: UITableView!
     
@@ -9,8 +12,16 @@ class editViewController: UITableViewController {
     let basicarray = [item(newcontent: "s", newdone: false, newsubitems: [item]()), item(newcontent: "b", newdone: false, newsubitems: [item]())]
     var basicitem : item = item(newcontent: "", newdone: true, newsubitems: [item]())
     var basiclist = list(newitems: [item](), newtitle: "", newcreated: Date.init())
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //set database refrence
+        ref = Database.database().reference()
+        
+        
+        
         //basiclist = list(newitems: x, newtitle: "basic list", newcreated: Date.init())
         // Do any additional setup after loading the view.
     }
@@ -25,11 +36,19 @@ class editViewController: UITableViewController {
                 self.basiclist.title = textField.text!
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
+                    
+                    //for testing purposes. Delete once a proper button has been added
+                    //post to firebase
+//                    self.ref?.child("Lists").childByAutoId().setValue(self.basiclist.items)
                 }
             }))
             self.present(alert, animated: true, completion: nil)
             DispatchQueue.main.async {
                 self.tableView.reloadData()
+                
+                //for testing purposes. Delete once a proper button has been added
+                //post to firebase
+//                self.ref?.child("Lists").childByAutoId().setValue(self.basiclist.items)
             }
         }
         else if indexPath.row == basiclist.items.count+1{
@@ -41,6 +60,9 @@ class editViewController: UITableViewController {
                 self.basiclist.items.append(item(newcontent: (alert?.textFields![0].text)!, newdone: false, newsubitems: [item]()))
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
+                    //for testing purposes. Delete once a proper button has been added
+                    //post to firebase
+//                    self.ref?.child("Lists").childByAutoId().setValue(self.basiclist.items)
                 }
                 }
             ))
@@ -50,6 +72,9 @@ class editViewController: UITableViewController {
             
             DispatchQueue.main.async {
                 self.tableView.reloadData()
+                //for testing purposes. Delete once a proper button has been added
+                //post to firebase
+//                self.ref?.child("Lists").childByAutoId().setValue(self.basiclist.items)
             }
         }
             /*  else{
@@ -76,12 +101,18 @@ class editViewController: UITableViewController {
                 self.basiclist.items[indexPath.row-1] = result
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
+                    //for testing purposes. Delete once a proper button has been added
+                    //post to firebase
+//                    self.ref?.child("Lists").childByAutoId().setValue(self.basiclist.items)
                 }
             }
             
         }
         DispatchQueue.main.async {
             self.tableView.reloadData()
+            //for testing purposes. Delete once a proper button has been added
+            //post to firebase
+//            self.ref?.child("Lists").childByAutoId().setValue(self.basiclist.items)
         }
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -114,18 +145,24 @@ class editViewController: UITableViewController {
     {
         // 1
         if indexPath.row != 0 && indexPath.row != basiclist.items.count+1{
-            let doneaction = UITableViewRowAction(style: UITableViewRowAction.Style.default, title: "done" , handler: { (action:UITableViewRowAction, indexPath: IndexPath) -> Void in
+            let doneaction = UITableViewRowAction(style: .normal, title: "done" , handler: { (action:UITableViewRowAction, indexPath: IndexPath) -> Void in
                 self.basiclist.items[indexPath.row-1].done = true
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
+                    //for testing purposes. Delete once a proper button has been added
+                    //post to firebase
+//                    self.ref?.child("Lists").childByAutoId().setValue(self.basiclist.items)
                 }
                 
             })
             // 3
-            let notdoneaction = UITableViewRowAction(style: UITableViewRowAction.Style.default, title: "not done" , handler: { (action:UITableViewRowAction, indexPath:IndexPath) -> Void in
+            let notdoneaction = UITableViewRowAction(style: .normal, title: "not done" , handler: { (action:UITableViewRowAction, indexPath:IndexPath) -> Void in
                 self.basiclist.items[indexPath.row-1].done = false
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
+                    //for testing purposes. Delete once a proper button has been added
+                    //post to firebase
+//                    self.ref?.child("Lists").childByAutoId().setValue(self.basiclist.items)
                 }
             })
             // 5

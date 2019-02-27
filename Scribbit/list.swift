@@ -18,4 +18,12 @@ class list {
         items=newitems
         title=newtitle
     }
+    
+//    func createDictionary()->NSDictionary{
+//        
+//        
+//            
+//        
+//        return ["" : 0]
+//    }
 }
