@@ -16,6 +16,7 @@
 		0AE5D39F2210CEC500E655D4 /* list.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AE5D39A2210CEC500E655D4 /* list.storyboard */; };
 		0AE5D3A12210D3CA00E655D4 /* editviewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5D3A02210D3CA00E655D4 /* editviewcontroller.swift */; };
 		51DF1B48A339845513C14C8C /* Pods_Scribbit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9249620E5589A3B7EAE1587F /* Pods_Scribbit.framework */; };
+		C26B908E22207509000C1939 /* DisplayScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26B908D22207509000C1939 /* DisplayScreenViewController.swift */; };
 		C2730FDC2208BE2A006D3A1B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2730FDB2208BE2A006D3A1B /* GoogleService-Info.plist */; };
 		C2730FDD2208BE2A006D3A1B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2730FDB2208BE2A006D3A1B /* GoogleService-Info.plist */; };
 		C2730FDE2208BE2A006D3A1B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2730FDB2208BE2A006D3A1B /* GoogleService-Info.plist */; };
@@ -51,14 +52,15 @@
 /* Begin PBXFileReference section */
 		0A0B6D1D21E9251600D222F9 /* Global Variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Global Variables.swift"; sourceTree = "<group>"; };
 		0A7969D9220CAB9100B65D6F /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
-		0AE5D3962210CEC400E655D4 /* list.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = list.swift; path = "../../../Downloads/Scribbit-listbranch 2/Scribbit/list.swift"; sourceTree = "<group>"; };
+		0AE5D3962210CEC400E655D4 /* list.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = list.swift; sourceTree = "<group>"; };
 		0AE5D3972210CEC500E655D4 /* itemedit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = itemedit.storyboard; sourceTree = "<group>"; };
-		0AE5D3982210CEC500E655D4 /* item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = item.swift; path = "../../../Downloads/Scribbit-listbranch 2/Scribbit/item.swift"; sourceTree = "<group>"; };
+		0AE5D3982210CEC500E655D4 /* item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = item.swift; sourceTree = "<group>"; };
 		0AE5D3992210CEC500E655D4 /* itemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = itemViewController.swift; sourceTree = "<group>"; };
-		0AE5D39A2210CEC500E655D4 /* list.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = list.storyboard; path = "../../../Downloads/Scribbit-listbranch 2/Scribbit/list.storyboard"; sourceTree = "<group>"; };
+		0AE5D39A2210CEC500E655D4 /* list.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = list.storyboard; sourceTree = "<group>"; };
 		0AE5D3A02210D3CA00E655D4 /* editviewcontroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = editviewcontroller.swift; sourceTree = "<group>"; };
 		917CBED20CCF3966642404EA /* Pods-Scribbit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scribbit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Scribbit/Pods-Scribbit.debug.xcconfig"; sourceTree = "<group>"; };
 		9249620E5589A3B7EAE1587F /* Pods_Scribbit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scribbit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C26B908D22207509000C1939 /* DisplayScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayScreenViewController.swift; sourceTree = "<group>"; };
 		C2730FDB2208BE2A006D3A1B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C2730FDF220C99D4006D3A1B /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		C29A4DAD21EFB1AF0084E5BE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				C29A4DAD21EFB1AF0084E5BE /* LoginViewController.swift */,
 				C29A4E2921F202B20084E5BE /* SignUpViewController.swift */,
 				C2D3DA7A21DE7D0E009904BF /* Main.storyboard */,
+				C26B908D22207509000C1939 /* DisplayScreenViewController.swift */,
 				C2730FDF220C99D4006D3A1B /* Authentication.storyboard */,
 				C2D3DA7D21DE7D10009904BF /* Assets.xcassets */,
 				C2D3DA7F21DE7D10009904BF /* LaunchScreen.storyboard */,
@@ -378,6 +381,7 @@
 				0A7969DA220CAB9100B65D6F /* AuthViewController.swift in Sources */,
 				0AE5D39E2210CEC500E655D4 /* itemViewController.swift in Sources */,
 				0AE5D39D2210CEC500E655D4 /* item.swift in Sources */,
+				C26B908E22207509000C1939 /* DisplayScreenViewController.swift in Sources */,
 				C29A4E2A21F202B20084E5BE /* SignUpViewController.swift in Sources */,
 				C2D3DA7721DE7D0E009904BF /* AppDelegate.swift in Sources */,
 				0A0B6D1E21E9251600D222F9 /* Global Variables.swift in Sources */,

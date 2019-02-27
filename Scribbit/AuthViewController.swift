@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class AuthViewController: UIViewController {
 
@@ -32,13 +33,19 @@ class AuthViewController: UIViewController {
     }
     */
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "ListViewController") as UIViewController
-        present(vc, animated: true, completion: nil)
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        // Get the new view controller using segue.destinationViewController.
+//        // Pass the selected object to the new view controller.
+//
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let vc = storyboard.instantiateViewController(withIdentifier: "ListViewController") as UIViewController
+//        present(vc, animated: true, completion: nil)
+//    }
 
+    override func viewDidAppear(_ animated: Bool) {
+        if let _ = Auth.auth().currentUser{
+            performSegue(withIdentifier: "ToMain", sender: self)
+        }
+    }
+    
 }

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ioh-q1-Bof">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ioh-q1-Bof">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -68,10 +68,21 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mS5-ZE-1G0"/>
                     </view>
+                    <connections>
+                        <segue destination="U7U-wY-ZOQ" kind="show" identifier="ToMain" id="CnS-2R-Oyz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="70A-uC-7X5" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="641" y="195"/>
+        </scene>
+        <!--ListViewController-->
+        <scene sceneID="dDO-rk-Ebj">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="ListViewController" id="U7U-wY-ZOQ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pLY-MO-xkx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1386" y="194"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="d4n-k2-epx">
@@ -81,8 +92,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yz-k3-wDN">
-                                <rect key="frame" x="50" y="70" width="113" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yz-k3-wDN">
+                                <rect key="frame" x="50" y="70" width="58" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -148,14 +159,14 @@
                         <viewLayoutGuide key="safeArea" id="XiD-rD-MTG"/>
                     </view>
                     <connections>
+                        <outlet property="emailTextField" destination="8wj-7T-tdd" id="Ugs-3c-G1a"/>
                         <outlet property="loginButton" destination="qkU-ez-zVr" id="QQe-2l-Izd"/>
                         <outlet property="passwordTextField" destination="MZE-f7-xEx" id="rK1-ws-rnw"/>
-                        <outlet property="userNameTextField" destination="8wj-7T-tdd" id="nZ5-ue-kep"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YKC-R3-lHq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1471" y="-120"/>
+            <point key="canvasLocation" x="1470" y="-218"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="9aS-5g-lcZ">
@@ -256,7 +267,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CYO-Gz-KEY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1469.5999999999999" y="538.38080959520244"/>
+            <point key="canvasLocation" x="1470" y="711"/>
         </scene>
         <!--Storyboard Reference-->
         <scene sceneID="YEz-4W-0s4">
