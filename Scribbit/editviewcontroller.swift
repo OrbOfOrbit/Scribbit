@@ -165,8 +165,17 @@ class editViewController: UITableViewController {
 //                    self.ref?.child("Lists").childByAutoId().setValue(self.basiclist.items)
                 }
             })
+            let deletethis = UITableViewRowAction(style: .normal, title: "delete this" , handler: { (action:UITableViewRowAction, indexPath:IndexPath) -> Void in
+                self.basiclist.items.remove(at: indexPath.row-1)
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                    //for testing purposes. Delete once a proper button has been added
+                    //post to firebase
+                    //                    self.ref?.child("Lists").childByAutoId().setValue(self.basiclist.items)
+                }
+            })
             // 5
-            return [doneaction,notdoneaction]}
+            return [doneaction,notdoneaction,deletethis]}
         return [UITableViewRowAction]()
     }
     // override func table

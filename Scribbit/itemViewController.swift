@@ -101,7 +101,7 @@ class itemViewController: UIViewController, UITableViewDataSource,UITableViewDel
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]?
     {
         // 1
-        if indexPath.row != itemtoedit.subitems.count+1{
+        if indexPath.row != itemtoedit.subitems.count{
             let doneaction = UITableViewRowAction(style: .normal, title: "done" , handler: { (action:UITableViewRowAction, indexPath: IndexPath) -> Void in
                 self.itemtoedit.subitems[indexPath.row].done = true
                 DispatchQueue.main.async {
@@ -109,7 +109,14 @@ class itemViewController: UIViewController, UITableViewDataSource,UITableViewDel
                 }
                 
             })
-            // 3
+            let deletethis = UITableViewRowAction(style: .normal, title: "delete this" , handler: { (action:UITableViewRowAction, indexPath:IndexPath) -> Void in
+                self.itemtoedit.subitems.remove(at: indexPath.row)
+                DispatchQueue.main.async {
+                    self.myTableView.reloadData()
+                    //for testing purposes. Delete once a proper button has been added
+                    //post to firebase
+                    //                    self.ref?.child("Lists").childByAutoId().setValue(self.basiclist.items)
+                }})
             let notdoneaction = UITableViewRowAction(style: .normal, title: "not done" , handler: { (action:UITableViewRowAction, indexPath:IndexPath) -> Void in
                 self.itemtoedit.subitems[indexPath.row].done = false
                 DispatchQueue.main.async {
@@ -117,7 +124,7 @@ class itemViewController: UIViewController, UITableViewDataSource,UITableViewDel
                 }
             })
             // 5
-            return [doneaction,notdoneaction]}
+            return [doneaction,notdoneaction,deletethis]}
         return [UITableViewRowAction]()
     }
     
