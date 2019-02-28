@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class list {
+class list : Codable {
     var complete:Bool
     var created:Date
     var items:[item]
@@ -19,11 +19,5 @@ class list {
         title=newtitle
     }
     
-//    func createDictionary()->NSDictionary{
-//        
-//        
-//            
-//        
-//        return ["" : 0]
-//    }
+
 }

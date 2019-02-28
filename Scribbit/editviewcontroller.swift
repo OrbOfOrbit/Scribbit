@@ -5,6 +5,8 @@ import FirebaseDatabase
 class editViewController: UITableViewController {
     
     var ref: DatabaseReference?
+    let jsonEncoder = JSONEncoder()
+    
     
     //@IBOutlet var tableview: UITableView!
     
@@ -16,6 +18,8 @@ class editViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
         
         //set database refrence
         ref = Database.database().reference()
@@ -39,7 +43,8 @@ class editViewController: UITableViewController {
                     
                     //for testing purposes. Delete once a proper button has been added
                     //post to firebase
-//                    self.ref?.child("Lists").childByAutoId().setValue(self.basiclist.items)
+//                    let jsonData = try jsonEncoder.encode(basiclist)
+                    self.ref?.child("Lists").childByAutoId().setValue(self.basiclist.items)
                 }
             }))
             self.present(alert, animated: true, completion: nil)
@@ -48,7 +53,7 @@ class editViewController: UITableViewController {
                 
                 //for testing purposes. Delete once a proper button has been added
                 //post to firebase
-//                self.ref?.child("Lists").childByAutoId().setValue(self.basiclist.items)
+                self.ref?.child("Lists").childByAutoId().setValue(self.basiclist.items)
             }
         }
         else if indexPath.row == basiclist.items.count+1{
@@ -62,7 +67,7 @@ class editViewController: UITableViewController {
                     self.tableView.reloadData()
                     //for testing purposes. Delete once a proper button has been added
                     //post to firebase
-//                    self.ref?.child("Lists").childByAutoId().setValue(self.basiclist.items)
+                    self.ref?.child("Lists").childByAutoId().setValue(self.basiclist.items)
                 }
                 }
             ))
@@ -74,7 +79,7 @@ class editViewController: UITableViewController {
                 self.tableView.reloadData()
                 //for testing purposes. Delete once a proper button has been added
                 //post to firebase
-//                self.ref?.child("Lists").childByAutoId().setValue(self.basiclist.items)
+                self.ref?.child("Lists").childByAutoId().setValue(self.basiclist.items)
             }
         }
             /*  else{
@@ -103,7 +108,7 @@ class editViewController: UITableViewController {
                     self.tableView.reloadData()
                     //for testing purposes. Delete once a proper button has been added
                     //post to firebase
-//                    self.ref?.child("Lists").childByAutoId().setValue(self.basiclist.items)
+                    self.ref?.child("Lists").childByAutoId().setValue(self.basiclist.items)
                 }
             }
             
@@ -112,7 +117,7 @@ class editViewController: UITableViewController {
             self.tableView.reloadData()
             //for testing purposes. Delete once a proper button has been added
             //post to firebase
-//            self.ref?.child("Lists").childByAutoId().setValue(self.basiclist.items)
+            self.ref?.child("Lists").childByAutoId().setValue(self.basiclist.items)
         }
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -151,7 +156,7 @@ class editViewController: UITableViewController {
                     self.tableView.reloadData()
                     //for testing purposes. Delete once a proper button has been added
                     //post to firebase
-//                    self.ref?.child("Lists").childByAutoId().setValue(self.basiclist.items)
+                    self.ref?.child("Lists").childByAutoId().setValue(self.basiclist.items)
                 }
                 
             })
@@ -162,7 +167,7 @@ class editViewController: UITableViewController {
                     self.tableView.reloadData()
                     //for testing purposes. Delete once a proper button has been added
                     //post to firebase
-//                    self.ref?.child("Lists").childByAutoId().setValue(self.basiclist.items)
+                    self.ref?.child("Lists").childByAutoId().setValue(self.basiclist.items)
                 }
             })
             // 5
@@ -180,5 +185,18 @@ class editViewController: UITableViewController {
      // Pass the selected object to the new view controller.
      }
      */
+    
+    func encode(_ list:list)->Data{
+        
+        let jsonData = Data()
+        
+        do{
+            let jsonData = try jsonEncoder.encode(list)
+        }catch{
+            print("oopsie woopsie")
+        }
+        
+        return jsonData
+    }
     
 }

@@ -6,7 +6,7 @@
 //  Copyright © 2019 Oron Barash (student LM). All rights reserved.
 //
 import Foundation
-class item{
+class item : Codable{
     var done:Bool
     var content:String
     var subitems:[item]
