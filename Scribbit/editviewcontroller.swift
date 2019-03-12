@@ -1,6 +1,12 @@
 import UIKit
 import Firebase
 import FirebaseDatabase
+import FirebaseStorage
+
+
+//      note to self: instead of going through the immense trouble of merging this code, just copy over the list
+//  encoding code and the code that uploads the list to firebase to the newer version. It's a better idea trust me.
+
 
 class editViewController: UITableViewController {
     
@@ -23,6 +29,36 @@ class editViewController: UITableViewController {
         
         //set database refrence
         ref = Database.database().reference()
+        
+        // Create a root reference
+       
+        //test encoding code
+        //creates a test list for testing encoding
+        let testList = list(newitems: [item(newcontent: "gorgodo", newdone: false, newsubitems: [item(newcontent: "jamba", newdone: false, newsubitems: [])])], newtitle: "gorgon", newcreated: Date.init())
+       //prints the bite count of the encoted list
+        print(encode(testList))
+        //prints a string containing the encoded data
+        if let dataString = String(data: encode(testList), encoding: String.Encoding.utf8){
+            print(dataString)
+            
+            //write file to directory
+            //create directory
+            var homePath = NSHomeDirectory()
+            homePath.append("/jsonFile.txt")
+            print(homePath)
+            let pathURL = URL(fileURLWithPath: homePath)
+            
+            //save to directory
+            do {
+                try encode(testList).write(to: pathURL)
+                
+            } catch {
+                print("Couldn't write file")
+            }
+            
+            
+        }
+        //writes an object
         
         
         
@@ -53,7 +89,30 @@ class editViewController: UITableViewController {
                 
                 //for testing purposes. Delete once a proper button has been added
                 //post to firebase
-                self.ref?.child("Lists").childByAutoId().setValue(self.basiclist.items)
+               
+                //create refrence to new list
+                let listRefrence = self.ref?.child("Lists").childByAutoId()
+                
+                    //set values of date and contributors
+                    listRefrence?.child("Contributors").setValue("replace with var")
+                    listRefrence?.child("Date Created").setValue("replace with var")
+                    listRefrence?.child("Last Edited").setValue(self.basiclist.created)
+                    listRefrence?.child("Name").setValue(self.basiclist.title)
+                
+                    //create refrence to specific item item
+                    let itemRefrence = listRefrence?.child("Items").childByAutoId()
+                
+                        //use item refrence to create item
+                
+                            //for loop will sort through the various items
+          //                for item in self.basiclist.items{
+                            itemRefrence?.child("Last_Edited").setValue("replace with var")
+                            itemRefrence?.child("Name").setValue("replace with var")
+                            itemRefrence?.child("Type").setValue("replace with var")
+                            itemRefrence?.child("Value").setValue("replace with var")
+//                }
+                
+                
             }
         }
         else if indexPath.row == basiclist.items.count+1{
@@ -188,15 +247,18 @@ class editViewController: UITableViewController {
     
     func encode(_ list:list)->Data{
         
-        let jsonData = Data()
+        var jsonData = Data()
         
         do{
-            let jsonData = try jsonEncoder.encode(list)
+            jsonData = try jsonEncoder.encode(list)
         }catch{
             print("oopsie woopsie")
         }
         
         return jsonData
     }
+    
+    
+    
     
 }
