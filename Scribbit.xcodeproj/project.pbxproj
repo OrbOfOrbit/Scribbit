@@ -20,6 +20,10 @@
 		51DF1B48A339845513C14C8C /* Pods_Scribbit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9249620E5589A3B7EAE1587F /* Pods_Scribbit.framework */; };
 		9EA5559D221F17A600782F16 /* initiatelist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EA5559C221F17A600782F16 /* initiatelist.storyboard */; };
 		9EA5559F221F17B800782F16 /* InitiateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA5559E221F17B800782F16 /* InitiateViewController.swift */; };
+		9EC9B95B2236BDBC009176C9 /* newitem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC9B95A2236BDBC009176C9 /* newitem.swift */; };
+		9EC9B95D2236C080009176C9 /* newlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC9B95C2236C080009176C9 /* newlist.swift */; };
+		9EC9B95F2236C260009176C9 /* newlist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EC9B95E2236C260009176C9 /* newlist.storyboard */; };
+		9EC9B9612236C47D009176C9 /* neweditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC9B9602236C47D009176C9 /* neweditController.swift */; };
 		C2730FDC2208BE2A006D3A1B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2730FDB2208BE2A006D3A1B /* GoogleService-Info.plist */; };
 		C2730FDD2208BE2A006D3A1B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2730FDB2208BE2A006D3A1B /* GoogleService-Info.plist */; };
 		C2730FDE2208BE2A006D3A1B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2730FDB2208BE2A006D3A1B /* GoogleService-Info.plist */; };
@@ -67,6 +71,10 @@
 		9249620E5589A3B7EAE1587F /* Pods_Scribbit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scribbit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EA5559C221F17A600782F16 /* initiatelist.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = initiatelist.storyboard; sourceTree = "<group>"; };
 		9EA5559E221F17B800782F16 /* InitiateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitiateViewController.swift; sourceTree = "<group>"; };
+		9EC9B95A2236BDBC009176C9 /* newitem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newitem.swift; sourceTree = "<group>"; };
+		9EC9B95C2236C080009176C9 /* newlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newlist.swift; sourceTree = "<group>"; };
+		9EC9B95E2236C260009176C9 /* newlist.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = newlist.storyboard; sourceTree = "<group>"; };
+		9EC9B9602236C47D009176C9 /* neweditController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = neweditController.swift; sourceTree = "<group>"; };
 		C2730FDB2208BE2A006D3A1B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C2730FDF220C99D4006D3A1B /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		C29A4DAD21EFB1AF0084E5BE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -177,6 +185,10 @@
 				C2730FDB2208BE2A006D3A1B /* GoogleService-Info.plist */,
 				9EA5559C221F17A600782F16 /* initiatelist.storyboard */,
 				9EA5559E221F17B800782F16 /* InitiateViewController.swift */,
+				9EC9B95A2236BDBC009176C9 /* newitem.swift */,
+				9EC9B95C2236C080009176C9 /* newlist.swift */,
+				9EC9B95E2236C260009176C9 /* newlist.storyboard */,
+				9EC9B9602236C47D009176C9 /* neweditController.swift */,
 			);
 			path = Scribbit;
 			sourceTree = "<group>";
@@ -312,6 +324,7 @@
 				0AE5D39F2210CEC500E655D4 /* list.storyboard in Resources */,
 				C2730FDC2208BE2A006D3A1B /* GoogleService-Info.plist in Resources */,
 				C2D3DA7E21DE7D10009904BF /* Assets.xcassets in Resources */,
+				9EC9B95F2236C260009176C9 /* newlist.storyboard in Resources */,
 				C2D3DA7C21DE7D0E009904BF /* Main.storyboard in Resources */,
 				C2730FE0220C99D4006D3A1B /* Authentication.storyboard in Resources */,
 			);
@@ -391,12 +404,15 @@
 				C29A4DAE21EFB1AF0084E5BE /* LoginViewController.swift in Sources */,
 				C2D3DA7921DE7D0E009904BF /* ViewController.swift in Sources */,
 				0A7969DA220CAB9100B65D6F /* AuthViewController.swift in Sources */,
+				9EC9B95B2236BDBC009176C9 /* newitem.swift in Sources */,
 				0AE5D39E2210CEC500E655D4 /* itemViewController.swift in Sources */,
+				9EC9B95D2236C080009176C9 /* newlist.swift in Sources */,
 				0AE5D39D2210CEC500E655D4 /* item.swift in Sources */,
 				9EA5559F221F17B800782F16 /* InitiateViewController.swift in Sources */,
 				C29A4E2A21F202B20084E5BE /* SignUpViewController.swift in Sources */,
 				C2D3DA7721DE7D0E009904BF /* AppDelegate.swift in Sources */,
 				0A0B6D1E21E9251600D222F9 /* Global Variables.swift in Sources */,
+				9EC9B9612236C47D009176C9 /* neweditController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
