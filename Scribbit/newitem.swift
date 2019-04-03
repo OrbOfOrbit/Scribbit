@@ -11,10 +11,12 @@ class newitem{
     var done:Bool
     var type:Bool
     var value:String
+    var stuff="gaming"
     
     init(newdone:Bool,newtype:Bool,newvalue:String) {
         done = newdone
         type = newtype
         value = newvalue
+        
     }
 }
