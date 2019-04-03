@@ -20,6 +20,10 @@
 		51DF1B48A339845513C14C8C /* Pods_Scribbit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9249620E5589A3B7EAE1587F /* Pods_Scribbit.framework */; };
 		9EA5559D221F17A600782F16 /* initiatelist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EA5559C221F17A600782F16 /* initiatelist.storyboard */; };
 		9EA5559F221F17B800782F16 /* InitiateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA5559E221F17B800782F16 /* InitiateViewController.swift */; };
+		B332FB04222707C700E7B3C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B332FB03222707C700E7B3C2 /* ViewController.swift */; };
+		B3B8F053223982D900388100 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B8F0512230479D00388100 /* SettingsViewController.swift */; };
+		B3B8F0552239854100388100 /* ItemStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3B8F0542239854100388100 /* ItemStoryBoard.storyboard */; };
+		B3B8F057223C02D600388100 /* ItemDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B8F056223C02D600388100 /* ItemDisplayViewController.swift */; };
 		C2730FDC2208BE2A006D3A1B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2730FDB2208BE2A006D3A1B /* GoogleService-Info.plist */; };
 		C2730FDD2208BE2A006D3A1B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2730FDB2208BE2A006D3A1B /* GoogleService-Info.plist */; };
 		C2730FDE2208BE2A006D3A1B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2730FDB2208BE2A006D3A1B /* GoogleService-Info.plist */; };
@@ -27,7 +31,6 @@
 		C29A4DAE21EFB1AF0084E5BE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29A4DAD21EFB1AF0084E5BE /* LoginViewController.swift */; };
 		C29A4E2A21F202B20084E5BE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29A4E2921F202B20084E5BE /* SignUpViewController.swift */; };
 		C2D3DA7721DE7D0E009904BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D3DA7621DE7D0E009904BF /* AppDelegate.swift */; };
-		C2D3DA7921DE7D0E009904BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D3DA7821DE7D0E009904BF /* ViewController.swift */; };
 		C2D3DA7C21DE7D0E009904BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2D3DA7A21DE7D0E009904BF /* Main.storyboard */; };
 		C2D3DA7E21DE7D10009904BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2D3DA7D21DE7D10009904BF /* Assets.xcassets */; };
 		C2D3DA8121DE7D10009904BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2D3DA7F21DE7D10009904BF /* LaunchScreen.storyboard */; };
@@ -67,13 +70,16 @@
 		9249620E5589A3B7EAE1587F /* Pods_Scribbit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scribbit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EA5559C221F17A600782F16 /* initiatelist.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = initiatelist.storyboard; sourceTree = "<group>"; };
 		9EA5559E221F17B800782F16 /* InitiateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitiateViewController.swift; sourceTree = "<group>"; };
+		B332FB03222707C700E7B3C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B3B8F0512230479D00388100 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		B3B8F0542239854100388100 /* ItemStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ItemStoryBoard.storyboard; sourceTree = "<group>"; };
+		B3B8F056223C02D600388100 /* ItemDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDisplayViewController.swift; sourceTree = "<group>"; };
 		C2730FDB2208BE2A006D3A1B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C2730FDF220C99D4006D3A1B /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		C29A4DAD21EFB1AF0084E5BE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C29A4E2921F202B20084E5BE /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		C2D3DA7321DE7D0E009904BF /* Scribbit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scribbit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2D3DA7621DE7D0E009904BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C2D3DA7821DE7D0E009904BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C2D3DA7B21DE7D0E009904BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C2D3DA7D21DE7D10009904BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2D3DA8021DE7D10009904BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -156,7 +162,6 @@
 			isa = PBXGroup;
 			children = (
 				C2D3DA7621DE7D0E009904BF /* AppDelegate.swift */,
-				C2D3DA7821DE7D0E009904BF /* ViewController.swift */,
 				0AE5D3982210CEC500E655D4 /* item.swift */,
 				0AE5D3972210CEC500E655D4 /* itemedit.storyboard */,
 				0AE5D3992210CEC500E655D4 /* itemViewController.swift */,
@@ -167,6 +172,7 @@
 				C29A4DAD21EFB1AF0084E5BE /* LoginViewController.swift */,
 				C29A4E2921F202B20084E5BE /* SignUpViewController.swift */,
 				C2D3DA7A21DE7D0E009904BF /* Main.storyboard */,
+				B3B8F0512230479D00388100 /* SettingsViewController.swift */,
 				0ACCE1C7222635960062C0EC /* AllLists.storyboard */,
 				0ACCE1C9222637390062C0EC /* AllListsViewController.swift */,
 				C2730FDF220C99D4006D3A1B /* Authentication.storyboard */,
@@ -177,6 +183,9 @@
 				C2730FDB2208BE2A006D3A1B /* GoogleService-Info.plist */,
 				9EA5559C221F17A600782F16 /* initiatelist.storyboard */,
 				9EA5559E221F17B800782F16 /* InitiateViewController.swift */,
+				B332FB03222707C700E7B3C2 /* ViewController.swift */,
+				B3B8F0542239854100388100 /* ItemStoryBoard.storyboard */,
+				B3B8F056223C02D600388100 /* ItemDisplayViewController.swift */,
 			);
 			path = Scribbit;
 			sourceTree = "<group>";
@@ -305,6 +314,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3B8F0552239854100388100 /* ItemStoryBoard.storyboard in Resources */,
 				C2D3DA8121DE7D10009904BF /* LaunchScreen.storyboard in Resources */,
 				9EA5559D221F17A600782F16 /* initiatelist.storyboard in Resources */,
 				0AE5D39C2210CEC500E655D4 /* itemedit.storyboard in Resources */,
@@ -389,13 +399,15 @@
 				0AE5D39B2210CEC500E655D4 /* list.swift in Sources */,
 				0ACCE1CA222637390062C0EC /* AllListsViewController.swift in Sources */,
 				C29A4DAE21EFB1AF0084E5BE /* LoginViewController.swift in Sources */,
-				C2D3DA7921DE7D0E009904BF /* ViewController.swift in Sources */,
 				0A7969DA220CAB9100B65D6F /* AuthViewController.swift in Sources */,
 				0AE5D39E2210CEC500E655D4 /* itemViewController.swift in Sources */,
+				B332FB04222707C700E7B3C2 /* ViewController.swift in Sources */,
 				0AE5D39D2210CEC500E655D4 /* item.swift in Sources */,
 				9EA5559F221F17B800782F16 /* InitiateViewController.swift in Sources */,
 				C29A4E2A21F202B20084E5BE /* SignUpViewController.swift in Sources */,
+				B3B8F053223982D900388100 /* SettingsViewController.swift in Sources */,
 				C2D3DA7721DE7D0E009904BF /* AppDelegate.swift in Sources */,
+				B3B8F057223C02D600388100 /* ItemDisplayViewController.swift in Sources */,
 				0A0B6D1E21E9251600D222F9 /* Global Variables.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

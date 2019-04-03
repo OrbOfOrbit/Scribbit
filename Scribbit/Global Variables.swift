@@ -21,22 +21,47 @@ import UIKit
 // view controller (not the storyboard!). 
 
 class colorChoices{
-  
-  //  bgColor: Returns a light green color. Should be used for the background and text. 
-  public static var bgColor :UIColor{
-        get{
-            return UIColor.init(red: 115/255, green: 250/255, blue: 145/255, alpha: 100)
+    
+    static var currentTheme = true
+
+    
+  //  bgColor: Returns a light green color. Should be used for the background and text.
+    
+    
+    
+    
+    
+  public static var fgColor :UIColor{
+    get{
+        if(currentTheme){
+            return UIColor.blue
             
         }
+        return UIColor.white
+    }
+  
+    
     }
     
   //  fgColor: Returns white. Should be used in the backgrounds of buttons or other items (to contrast from the green
   // (background)
-    public static var fgColor: UIColor{
+    
+    
+    public static var bgColor: UIColor{
         get{
-            return UIColor.white
+            if(currentTheme){
+                return UIColor(red:102/255, green:255/255, blue:102/255, alpha:1.0)
+                
+            }
+            return UIColor.black
         }
+           
+        
     }
+    
+
+
+        
     
 }
     

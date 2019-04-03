@@ -41,8 +41,21 @@
                                     <segue destination="Pae-OJ-Lx2" kind="show" id="66I-iT-qEs"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G9g-1P-nxw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="New List" id="gQl-6n-tXJ">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="zK1-Vg-7Gx">
+                                            <connections>
+                                                <segue destination="sCO-kP-eYc" kind="show" id="sAa-7r-6Fx"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="vxY-oM-2qx" firstAttribute="bottom" secondItem="pYv-IO-v41" secondAttribute="bottom" constant="534" id="2CM-aM-D5T"/>
                             <constraint firstItem="vxY-oM-2qx" firstAttribute="trailing" secondItem="pYv-IO-v41" secondAttribute="trailing" id="ORa-Za-qhW"/>
@@ -60,6 +73,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GmG-la-tob" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-74" y="183"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="1A5-C5-2Kv">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="sCO-kP-eYc" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1fl-gl-apc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-195" y="662"/>
         </scene>
         <!--list-->
         <scene sceneID="51a-AD-QSh">
@@ -67,7 +89,7 @@
                 <viewControllerPlaceholder storyboardName="list" id="Pae-OJ-Lx2" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CbC-ts-oeK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="118" y="952"/>
+            <point key="canvasLocation" x="71" y="662"/>
         </scene>
     </scenes>
 </document>
