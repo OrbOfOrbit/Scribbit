@@ -213,16 +213,26 @@ class neweditController: UITableViewController {
                 }
             }))
             alert.addAction(UIAlertAction(title: "add list", style: .default, handler: { [weak alert] (_) in
-                var gamer = "List_1"
+                var lamer = "List_1"
                 var b = newitem(newdone: false, newtype: true, newvalue: alert?.textFields?[0].text ?? "uuu")
-                self.ref?.child("Lists").observe(.childAdded, with: {(snapshot) in
+                var rev = Database.database().reference()
+                
+                rev.observe(.childAdded, with: {(snashot) in
+                    print(snashot.children.allObjects)
+                    print("but is it real")
+                    print(snashot.hasChild(lamer))
+                    print("But is it really real")
+                    print(snashot.hasChild(lamer))
+                    print("what even is this madness")
+                    print(lamer)
                     var i = 1
-                    while (snapshot.childSnapshot(forPath: gamer).exists()){
-                        
+                    while (snashot.childSnapshot(forPath: lamer).exists()){
+                        print(i)
                         i = i + 1
                         
-                        gamer = String(gamer.dropLast())
-                        gamer.append(String(i))
+                        lamer = String(lamer.dropLast())
+                        lamer.append(String(i))
+                        b.stuff=lamer
                     }
                     
                     
@@ -231,15 +241,21 @@ class neweditController: UITableViewController {
                     
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
-                        //for testing purposes. Delete once a proper button has been added
-                        //post to firebase
-                        //                    self.ref?.child("Lists").childByAutoId().setValue(self.basiclist.items)
                     }
                 })
-                b.stuff=gamer
+                b.stuff=lamer
                 self.basiclist?.items.append(b)
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
             }))
             self.present(alert, animated:false)
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+                //for testing purposes. Delete once a proper button has been added
+                //post to firebase
+                //                    self.ref?.child("Lists").childByAutoId().setValue(self.basiclist.items)
+            }
             
         }
         DispatchQueue.main.async {
