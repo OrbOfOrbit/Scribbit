@@ -30,14 +30,11 @@ class neweditController: UITableViewController {
             var stringiterator = "Item_1"
             var i = 1
             while (snapshot.childSnapshot(forPath: stringiterator).exists()){
-               // print(snapshot.childSnapshot(forPath: gamer).children.allObjects)
-              
+            
                 var isdone:Bool
-                print(i)
                 if (snapshot.childSnapshot(forPath: stringiterator).childSnapshot(forPath: "Value").value as? String)!.first == "%"{
                   
                   let  p = (snapshot.childSnapshot(forPath: stringiterator).childSnapshot(forPath: "Value").value as? String)!.split(separator: "%")[0]
-                    print(p)
                 let b = Int(String(p))
                     isdone = (b)! == 1}
                 else {isdone = false}
@@ -53,7 +50,6 @@ class neweditController: UITableViewController {
                
                 stringiterator = String(stringiterator.dropLast())
                 stringiterator.append(String(i))
-                //print(gamer)
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
@@ -177,7 +173,6 @@ class neweditController: UITableViewController {
     }
      override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if (indexPath.row != basiclist?.items.count && (basiclist?.items[indexPath.row].type)! == true) {
-            print("a")
             let board = UIStoryboard(name: "newlist", bundle: self.nibBundle)
             let controller = board.instantiateInitialViewController() as! neweditController
             controller.dataget=String((basiclist?.items[indexPath.row].stuff)!)
@@ -186,7 +181,6 @@ class neweditController: UITableViewController {
             self.present(controller,animated: true)
             self.viewDidLoad()
             
-           // print(String((basiclist?.items[indexPath.row].value.split(separator: "⍰")[1])!))
         }
         
         else if indexPath.row != basiclist?.items.count{
@@ -201,9 +195,6 @@ class neweditController: UITableViewController {
                 self.basiclist?.items.append(newitem(newdone: false, newtype: false, newvalue: alert?.textFields?[0].text ?? "" ))
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
-                    //for testing purposes. Delete once a proper button has been added
-                    //post to firebase
-                    //                    self.ref?.child("Lists").childByAutoId().setValue(self.basiclist.items)
                 }
             }))
             alert.addAction(UIAlertAction(title: "add list", style: .default, handler: { [weak alert] (_) in
@@ -214,7 +205,6 @@ class neweditController: UITableViewController {
                 rev.observe(.childAdded, with: {(snashot) in
                     var i = 1
                     while (snashot.childSnapshot(forPath: editstringiterator).exists()){
-                        print(i)
                         i = i + 1
                         
                         editstringiterator = String(editstringiterator.dropLast())
@@ -269,7 +259,6 @@ class neweditController: UITableViewController {
                 snapshot.child(savestringiterator).child("Name").setValue(basiclist?.items[i].value)
                 if basiclist?.items[i].type == false{
                     let poop = (basiclist?.items[i].done)! ? 1 : 0
-                    print(poop)
                 //snapshot.child(gamer).child("Done").setValue(result)
                     var v = "%" + String(poop) + "%" + (basiclist?.items[i].stuff.substring(from: (basiclist?.items[i].stuff.index((basiclist?.items[i].stuff.startIndex)!, offsetBy: 3))!))!
                     snapshot.child(savestringiterator).child("Value").setValue(v)}
@@ -283,56 +272,8 @@ class neweditController: UITableViewController {
               
             }
            self.dismiss(animated: true, completion: nil)
-              //basiclist = newlist(newitems: [newitem](), newtitle: "", newcreated: Date.init())
         }
     }
  
-  
-
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
