@@ -13,39 +13,37 @@ class neweditController: UITableViewController {
     @IBOutlet var tableview: UITableView!
     var ref:DatabaseReference?
     var handle:DatabaseHandle?
-    var basicitem = newitem(newdone: false, newtype: false, newvalue: "mama mia")
-    var basicitem2 = newitem(newdone: false, newtype: false, newvalue: "papa mia")
     var basiclist:newlist?
     var listdate = [String]()
     var dataget="List_1"
     override func viewDidLoad() {
         tableView.delegate = self
         tableView.dataSource = self
-        let longrecon = UILongPressGestureRecognizer(target: self, action: #selector(mamamia))
+        let longrecon = UILongPressGestureRecognizer(target: self, action: #selector(longtap))
         tableview.addGestureRecognizer(longrecon)
         super.viewDidLoad()
         basiclist = newlist(newitems: [newitem](), newtitle: "", newcreated: Date.init())
-       tableview.isEditing=true
+        tableview.isEditing=true
         tableview.allowsSelectionDuringEditing = true
         ref = Database.database().reference()
         ref?.child("Lists").child(dataget).child("Items").observe(.value, with: {(snapshot) in
-            var gamer = "Item_1"
+            var stringiterator = "Item_1"
             var i = 1
-            while (snapshot.childSnapshot(forPath: gamer).exists()){
+            while (snapshot.childSnapshot(forPath: stringiterator).exists()){
                // print(snapshot.childSnapshot(forPath: gamer).children.allObjects)
               
                 var isdone:Bool
                 print(i)
-                if (snapshot.childSnapshot(forPath: gamer).childSnapshot(forPath: "Value").value as? String)!.first == "%"{
+                if (snapshot.childSnapshot(forPath: stringiterator).childSnapshot(forPath: "Value").value as? String)!.first == "%"{
                   
-                  let  p = (snapshot.childSnapshot(forPath: gamer).childSnapshot(forPath: "Value").value as? String)!.split(separator: "%")[0]
+                  let  p = (snapshot.childSnapshot(forPath: stringiterator).childSnapshot(forPath: "Value").value as? String)!.split(separator: "%")[0]
                     print(p)
                 let b = Int(String(p))
                     isdone = (b)! == 1}
                 else {isdone = false}
             
-                    let additem = newitem(newdone: isdone, newtype: (snapshot.childSnapshot(forPath: gamer).childSnapshot(forPath: "Type").value as? Bool)!, newvalue: (snapshot.childSnapshot(forPath: gamer).childSnapshot(forPath: "Name").value as? String)!)
-                additem.stuff = (snapshot.childSnapshot(forPath: gamer).childSnapshot(forPath: "Value").value as? String)!
+                    let additem = newitem(newdone: isdone, newtype: (snapshot.childSnapshot(forPath: stringiterator).childSnapshot(forPath: "Type").value as? Bool)!, newvalue: (snapshot.childSnapshot(forPath: stringiterator).childSnapshot(forPath: "Name").value as? String)!)
+                additem.stuff = (snapshot.childSnapshot(forPath: stringiterator).childSnapshot(forPath: "Value").value as? String)!
                     self.basiclist?.items.append(additem)
                     
                 
@@ -53,15 +51,11 @@ class neweditController: UITableViewController {
                 
                 i = i + 1
                
-                gamer = String(gamer.dropLast())
-                gamer.append(String(i))
+                stringiterator = String(stringiterator.dropLast())
+                stringiterator.append(String(i))
                 //print(gamer)
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
-                    
-                    //for testing purposes. Delete once a proper button has been added
-                    //post to firebase
-                    //                self.ref?.child("Lists").childByAutoId().setValue(self.basiclist.items)
                 }
             }
             
@@ -77,7 +71,7 @@ class neweditController: UITableViewController {
     }
 
     // MARK: - Table view data source
-    @objc func mamamia(recognizer: UITapGestureRecognizer){
+    @objc func longtap(recognizer: UITapGestureRecognizer){
         
             if recognizer.state == UIGestureRecognizerState.ended {
                 let tapLocation = recognizer.location(in: self.tableView)
@@ -213,26 +207,19 @@ class neweditController: UITableViewController {
                 }
             }))
             alert.addAction(UIAlertAction(title: "add list", style: .default, handler: { [weak alert] (_) in
-                var lamer = "List_1"
+                var editstringiterator = "List_1"
                 var b = newitem(newdone: false, newtype: true, newvalue: alert?.textFields?[0].text ?? "uuu")
                 var rev = Database.database().reference()
                 
                 rev.observe(.childAdded, with: {(snashot) in
-                    print(snashot.children.allObjects)
-                    print("but is it real")
-                    print(snashot.hasChild(lamer))
-                    print("But is it really real")
-                    print(snashot.hasChild(lamer))
-                    print("what even is this madness")
-                    print(lamer)
                     var i = 1
-                    while (snashot.childSnapshot(forPath: lamer).exists()){
+                    while (snashot.childSnapshot(forPath: editstringiterator).exists()){
                         print(i)
                         i = i + 1
                         
-                        lamer = String(lamer.dropLast())
-                        lamer.append(String(i))
-                        b.stuff=lamer
+                        editstringiterator = String(editstringiterator.dropLast())
+                        editstringiterator.append(String(i))
+                        b.stuff=editstringiterator
                     }
                     
                     
@@ -243,7 +230,7 @@ class neweditController: UITableViewController {
                         self.tableView.reloadData()
                     }
                 })
-                b.stuff=lamer
+                b.stuff=editstringiterator
                 self.basiclist?.items.append(b)
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
@@ -275,24 +262,24 @@ class neweditController: UITableViewController {
             ref?.child("Lists").child(dataget).child("Items").removeAllObservers()
             ref?.removeAllObservers()
             var snapshot = ref!.child("Lists").child(dataget).child("Items")
-            var gamer = "Item_0"
+            var savestringiterator = "Item_0"
             for i  in 0...basiclist!.items.count-1{
-                gamer = String(gamer.dropLast())
-                gamer.append(String(i+1))
-                snapshot.child(gamer).child("Name").setValue(basiclist?.items[i].value)
+                savestringiterator = String(savestringiterator.dropLast())
+                savestringiterator.append(String(i+1))
+                snapshot.child(savestringiterator).child("Name").setValue(basiclist?.items[i].value)
                 if basiclist?.items[i].type == false{
                     let poop = (basiclist?.items[i].done)! ? 1 : 0
                     print(poop)
                 //snapshot.child(gamer).child("Done").setValue(result)
                     var v = "%" + String(poop) + "%" + (basiclist?.items[i].stuff.substring(from: (basiclist?.items[i].stuff.index((basiclist?.items[i].stuff.startIndex)!, offsetBy: 3))!))!
-                    snapshot.child(gamer).child("Value").setValue(v)}
-                else {snapshot.child(gamer).child("Value").setValue(basiclist?.items[i].stuff)}
+                    snapshot.child(savestringiterator).child("Value").setValue(v)}
+                else {snapshot.child(savestringiterator).child("Value").setValue(basiclist?.items[i].stuff)}
                 let soop = (basiclist?.items[i].type)! ? 1 : 0
-                snapshot.child(gamer).child("Type").setValue(soop)
+                snapshot.child(savestringiterator).child("Type").setValue(soop)
                 let formatteddate = DateFormatter()
                 formatteddate.dateStyle = .long
                 formatteddate.timeStyle = .long
-                snapshot.child(gamer).child("Last_Edited").setValue(formatteddate.string(from: Date.init()))
+                snapshot.child(savestringiterator).child("Last_Edited").setValue(formatteddate.string(from: Date.init()))
               
             }
            self.dismiss(animated: true, completion: nil)
