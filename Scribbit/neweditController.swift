@@ -72,7 +72,7 @@ class neweditController: UITableViewController {
             if recognizer.state == UIGestureRecognizerState.ended {
                 let tapLocation = recognizer.location(in: self.tableView)
                 if let tapIndexPath = self.tableView.indexPathForRow(at: tapLocation) {
-                    if let tappedCell = self.tableView.cellForRow(at: tapIndexPath) as? UITableViewCell {
+                    if (self.tableView.cellForRow(at: tapIndexPath)) != nil {
                         if tapIndexPath.row != basiclist?.items.count{
                             let alert = UIAlertController(title: "title", message: "enter a new title", preferredStyle: .alert)
                             alert.addTextField { (textField) in
@@ -199,8 +199,8 @@ class neweditController: UITableViewController {
             }))
             alert.addAction(UIAlertAction(title: "add list", style: .default, handler: { [weak alert] (_) in
                 var editstringiterator = "List_1"
-                var b = newitem(newdone: false, newtype: true, newvalue: alert?.textFields?[0].text ?? "uuu")
-                var rev = Database.database().reference()
+                let b = newitem(newdone: false, newtype: true, newvalue: alert?.textFields?[0].text ?? "uuu")
+                let rev = Database.database().reference()
                 
                 rev.observe(.childAdded, with: {(snashot) in
                     var i = 1
@@ -251,16 +251,16 @@ class neweditController: UITableViewController {
         if motion == .motionShake {
             ref?.child("Lists").child(dataget).child("Items").removeAllObservers()
             ref?.removeAllObservers()
-            var snapshot = ref!.child("Lists").child(dataget).child("Items")
+            let snapshot = ref!.child("Lists").child(dataget).child("Items")
             var savestringiterator = "Item_0"
             for i  in 0...basiclist!.items.count-1{
                 savestringiterator = String(savestringiterator.dropLast())
                 savestringiterator.append(String(i+1))
                 snapshot.child(savestringiterator).child("Name").setValue(basiclist?.items[i].value)
                 if basiclist?.items[i].type == false{
-                    let poop = (basiclist?.items[i].done)! ? 1 : 0
+                    let doneasint = (basiclist?.items[i].done)! ? 1 : 0
                 //snapshot.child(gamer).child("Done").setValue(result)
-                    var v = "%" + String(poop) + "%" + (basiclist?.items[i].stuff.substring(from: (basiclist?.items[i].stuff.index((basiclist?.items[i].stuff.startIndex)!, offsetBy: 3))!))!
+                    let v = "%" + String(doneasint) + "%" + (basiclist?.items[i].stuff.substring(from: (basiclist?.items[i].stuff.index((basiclist?.items[i].stuff.startIndex)!, offsetBy: 3))!))!
                     snapshot.child(savestringiterator).child("Value").setValue(v)}
                 else {snapshot.child(savestringiterator).child("Value").setValue(basiclist?.items[i].stuff)}
                 let soop = (basiclist?.items[i].type)! ? 1 : 0
