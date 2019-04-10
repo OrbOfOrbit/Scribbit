@@ -1,18 +1,22 @@
 //
-//  item.swift
+//  newitem.swift
 //  Scribbit
 //
-//  Created by Alexander Romine (student LM) on 1/30/19.
+//  Created by Alexander Romine (student LM) on 3/11/19.
 //  Copyright © 2019 Oron Barash (student LM). All rights reserved.
 //
+
 import Foundation
-class item{
+class newitem{
     var done:Bool
-    var content:String
-    var subitems:[item]
-    init(newcontent:String, newdone:Bool, newsubitems:[item]) {
+    var type:Bool
+    var value:String
+    var stuff="gaming"
+    
+    init(newdone:Bool,newtype:Bool,newvalue:String) {
         done = newdone
-        content = newcontent
-        subitems = newsubitems
+        type = newtype
+        value = newvalue
+        
     }
 }

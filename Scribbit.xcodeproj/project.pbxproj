@@ -9,17 +9,15 @@
 /* Begin PBXBuildFile section */
 		0A0B6D1E21E9251600D222F9 /* Global Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0B6D1D21E9251600D222F9 /* Global Variables.swift */; };
 		0A7969DA220CAB9100B65D6F /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7969D9220CAB9100B65D6F /* AuthViewController.swift */; };
+		0A7C2268225E58EF00ECA601 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7C2267225E58EF00ECA601 /* SettingsViewController.swift */; };
 		0ACCE1C8222635960062C0EC /* AllLists.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ACCE1C7222635960062C0EC /* AllLists.storyboard */; };
 		0ACCE1CA222637390062C0EC /* AllListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACCE1C9222637390062C0EC /* AllListsViewController.swift */; };
 		0AE5D39B2210CEC500E655D4 /* list.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5D3962210CEC400E655D4 /* list.swift */; };
-		0AE5D39C2210CEC500E655D4 /* itemedit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AE5D3972210CEC500E655D4 /* itemedit.storyboard */; };
 		0AE5D39D2210CEC500E655D4 /* item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5D3982210CEC500E655D4 /* item.swift */; };
-		0AE5D39E2210CEC500E655D4 /* itemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5D3992210CEC500E655D4 /* itemViewController.swift */; };
 		0AE5D39F2210CEC500E655D4 /* list.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AE5D39A2210CEC500E655D4 /* list.storyboard */; };
 		0AE5D3A12210D3CA00E655D4 /* editviewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5D3A02210D3CA00E655D4 /* editviewcontroller.swift */; };
 		51DF1B48A339845513C14C8C /* Pods_Scribbit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9249620E5589A3B7EAE1587F /* Pods_Scribbit.framework */; };
 		9EA5559D221F17A600782F16 /* initiatelist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EA5559C221F17A600782F16 /* initiatelist.storyboard */; };
-		9EA5559F221F17B800782F16 /* InitiateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA5559E221F17B800782F16 /* InitiateViewController.swift */; };
 		C2730FDC2208BE2A006D3A1B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2730FDB2208BE2A006D3A1B /* GoogleService-Info.plist */; };
 		C2730FDD2208BE2A006D3A1B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2730FDB2208BE2A006D3A1B /* GoogleService-Info.plist */; };
 		C2730FDE2208BE2A006D3A1B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2730FDB2208BE2A006D3A1B /* GoogleService-Info.plist */; };
@@ -55,18 +53,16 @@
 /* Begin PBXFileReference section */
 		0A0B6D1D21E9251600D222F9 /* Global Variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Global Variables.swift"; sourceTree = "<group>"; };
 		0A7969D9220CAB9100B65D6F /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		0A7C2267225E58EF00ECA601 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0ACCE1C7222635960062C0EC /* AllLists.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AllLists.storyboard; sourceTree = "<group>"; };
 		0ACCE1C9222637390062C0EC /* AllListsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllListsViewController.swift; sourceTree = "<group>"; };
 		0AE5D3962210CEC400E655D4 /* list.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = list.swift; path = Scribbit/list.swift; sourceTree = SOURCE_ROOT; };
-		0AE5D3972210CEC500E655D4 /* itemedit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = itemedit.storyboard; path = Scribbit/itemedit.storyboard; sourceTree = SOURCE_ROOT; };
 		0AE5D3982210CEC500E655D4 /* item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = item.swift; path = Scribbit/item.swift; sourceTree = SOURCE_ROOT; };
-		0AE5D3992210CEC500E655D4 /* itemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = itemViewController.swift; sourceTree = "<group>"; };
 		0AE5D39A2210CEC500E655D4 /* list.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = list.storyboard; path = Scribbit/list.storyboard; sourceTree = SOURCE_ROOT; };
 		0AE5D3A02210D3CA00E655D4 /* editviewcontroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = editviewcontroller.swift; sourceTree = "<group>"; };
 		917CBED20CCF3966642404EA /* Pods-Scribbit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scribbit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Scribbit/Pods-Scribbit.debug.xcconfig"; sourceTree = "<group>"; };
 		9249620E5589A3B7EAE1587F /* Pods_Scribbit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scribbit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EA5559C221F17A600782F16 /* initiatelist.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = initiatelist.storyboard; sourceTree = "<group>"; };
-		9EA5559E221F17B800782F16 /* InitiateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitiateViewController.swift; sourceTree = "<group>"; };
 		C2730FDB2208BE2A006D3A1B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C2730FDF220C99D4006D3A1B /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		C29A4DAD21EFB1AF0084E5BE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -158,8 +154,6 @@
 				C2D3DA7621DE7D0E009904BF /* AppDelegate.swift */,
 				C2D3DA7821DE7D0E009904BF /* ViewController.swift */,
 				0AE5D3982210CEC500E655D4 /* item.swift */,
-				0AE5D3972210CEC500E655D4 /* itemedit.storyboard */,
-				0AE5D3992210CEC500E655D4 /* itemViewController.swift */,
 				0AE5D3A02210D3CA00E655D4 /* editviewcontroller.swift */,
 				0AE5D39A2210CEC500E655D4 /* list.storyboard */,
 				0AE5D3962210CEC400E655D4 /* list.swift */,
@@ -167,6 +161,7 @@
 				C29A4DAD21EFB1AF0084E5BE /* LoginViewController.swift */,
 				C29A4E2921F202B20084E5BE /* SignUpViewController.swift */,
 				C2D3DA7A21DE7D0E009904BF /* Main.storyboard */,
+				0A7C2267225E58EF00ECA601 /* SettingsViewController.swift */,
 				0ACCE1C7222635960062C0EC /* AllLists.storyboard */,
 				0ACCE1C9222637390062C0EC /* AllListsViewController.swift */,
 				C2730FDF220C99D4006D3A1B /* Authentication.storyboard */,
@@ -176,7 +171,6 @@
 				C2D3DA8221DE7D10009904BF /* Info.plist */,
 				C2730FDB2208BE2A006D3A1B /* GoogleService-Info.plist */,
 				9EA5559C221F17A600782F16 /* initiatelist.storyboard */,
-				9EA5559E221F17B800782F16 /* InitiateViewController.swift */,
 			);
 			path = Scribbit;
 			sourceTree = "<group>";
@@ -307,7 +301,6 @@
 			files = (
 				C2D3DA8121DE7D10009904BF /* LaunchScreen.storyboard in Resources */,
 				9EA5559D221F17A600782F16 /* initiatelist.storyboard in Resources */,
-				0AE5D39C2210CEC500E655D4 /* itemedit.storyboard in Resources */,
 				0ACCE1C8222635960062C0EC /* AllLists.storyboard in Resources */,
 				0AE5D39F2210CEC500E655D4 /* list.storyboard in Resources */,
 				C2730FDC2208BE2A006D3A1B /* GoogleService-Info.plist in Resources */,
@@ -387,13 +380,12 @@
 			files = (
 				0AE5D3A12210D3CA00E655D4 /* editviewcontroller.swift in Sources */,
 				0AE5D39B2210CEC500E655D4 /* list.swift in Sources */,
+				0A7C2268225E58EF00ECA601 /* SettingsViewController.swift in Sources */,
 				0ACCE1CA222637390062C0EC /* AllListsViewController.swift in Sources */,
 				C29A4DAE21EFB1AF0084E5BE /* LoginViewController.swift in Sources */,
 				C2D3DA7921DE7D0E009904BF /* ViewController.swift in Sources */,
 				0A7969DA220CAB9100B65D6F /* AuthViewController.swift in Sources */,
-				0AE5D39E2210CEC500E655D4 /* itemViewController.swift in Sources */,
 				0AE5D39D2210CEC500E655D4 /* item.swift in Sources */,
-				9EA5559F221F17B800782F16 /* InitiateViewController.swift in Sources */,
 				C29A4E2A21F202B20084E5BE /* SignUpViewController.swift in Sources */,
 				C2D3DA7721DE7D0E009904BF /* AppDelegate.swift in Sources */,
 				0A0B6D1E21E9251600D222F9 /* Global Variables.swift in Sources */,

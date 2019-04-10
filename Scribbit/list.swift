@@ -1,29 +1,19 @@
 //
-//  list.swift
+//  newlist.swift
 //  Scribbit
 //
-//  Created by Alexander Romine (student LM) on 1/30/19.
+//  Created by Alexander Romine (student LM) on 3/11/19.
 //  Copyright © 2019 Oron Barash (student LM). All rights reserved.
 //
 
 import Foundation
-class list {
-    var complete:Bool
+class newlist {
     var created:Date
-    var items:[item]
+    var items:[newitem]
     var title:String
-    init(newitems:[item], newtitle:String, newcreated:Date) {
+    init(newitems:[newitem], newtitle:String, newcreated:Date) {
         created=newcreated
-        complete=false
         items=newitems
         title=newtitle
     }
-    
-//    func createDictionary()->NSDictionary{
-//        
-//        
-//            
-//        
-//        return ["" : 0]
-//    }
 }
