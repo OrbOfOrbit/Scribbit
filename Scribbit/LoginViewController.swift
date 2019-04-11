@@ -10,15 +10,16 @@ import UIKit
 import FirebaseAuth
 
 class LoginViewController: UIViewController, UITextFieldDelegate{
-
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        userNameTextField.delegate = self
-        passwordTextField.delegate = self
-        userNameTextField.becomeFirstResponder()
+        //userNameTextField.delegate = self
+       // passwordTextField.delegate = self
+        DispatchQueue.main.async {
+            self.userNameTextField.becomeFirstResponder()
+        }
     }
     
     @IBAction func loginButtonTouchedUpInside(_ sender: Any) {
@@ -43,7 +44,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
         }
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+ /*   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if userNameTextField.isFirstResponder{
             passwordTextField.becomeFirstResponder()
         }
@@ -53,5 +54,5 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
         }
         
         return true;
-    }
+    }*/
 }
