@@ -16,7 +16,7 @@ class HomeScreenViewController: UIViewController, UITableViewDelegate, UITableVi
     var ref: DatabaseReference?
     var databaseHandle: DatabaseHandle?
     var userListsDisplayed = 0
-   // var totalUserLists = 0
+    var totalUserLists = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,11 +29,11 @@ class HomeScreenViewController: UIViewController, UITableViewDelegate, UITableVi
         let id = (Auth.auth().currentUser?.uid)!
         
         ref?.child("Users").child(id).child("Total_Lists_Created").observe(.value, with: {(snapshot) in
-         //   self.totalUserLists = (snapshot.value as? Int)!
+            self.totalUserLists = (snapshot.value as? Int)!
         })
         
         ref?.observe(.value, with: {(snapshot) in
-            for i in self.userListsDisplayed..<self.userListsDisplayed{
+            for i in self.userListsDisplayed..<self.totalUserLists{
                 if(snapshot.childSnapshot(forPath: "Users").childSnapshot(forPath: id).childSnapshot(forPath: "UserLists").childSnapshot(forPath: "UserList_\(i+1)").exists()){
                     let List = OronTestList(snapshot.childSnapshot(forPath: "Lists").childSnapshot(forPath: (snapshot.childSnapshot(forPath: "Users").childSnapshot(forPath: id).childSnapshot(forPath: "UserLists").childSnapshot(forPath: "UserList_\(i+1)").value as? String)!))
                     self.listData.append(List)
