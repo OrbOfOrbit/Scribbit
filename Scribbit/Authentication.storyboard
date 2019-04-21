@@ -68,21 +68,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mS5-ZE-1G0"/>
                     </view>
-                    <connections>
-                        <segue destination="U7U-wY-ZOQ" kind="show" identifier="ToMain" id="CnS-2R-Oyz"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="70A-uC-7X5" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="641" y="195"/>
-        </scene>
-        <!--ListViewController-->
-        <scene sceneID="dDO-rk-Ebj">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="ListViewController" id="U7U-wY-ZOQ" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pLY-MO-xkx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1386" y="194"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="d4n-k2-epx">
@@ -268,14 +257,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CYO-Gz-KEY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1470" y="711"/>
-        </scene>
-        <!--Storyboard Reference-->
-        <scene sceneID="YEz-4W-0s4">
-            <objects>
-                <viewControllerPlaceholder id="L3l-78-uBt" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RY1-3S-3cD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2204" y="90"/>
         </scene>
     </scenes>
 </document>

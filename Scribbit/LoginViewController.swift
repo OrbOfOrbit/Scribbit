@@ -15,10 +15,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var loginButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        //userNameTextField.delegate = self
-       // passwordTextField.delegate = self
+        userNameTextField.delegate = self
+       passwordTextField.delegate = self
         DispatchQueue.main.async {
-            self.userNameTextField.becomeFirstResponder()
+          //  self.userNameTextField.becomeFirstResponder()
         }
     }
     
