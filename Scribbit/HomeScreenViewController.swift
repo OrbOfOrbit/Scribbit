@@ -41,7 +41,7 @@ class HomeScreenViewController: UIViewController, UITableViewDelegate, UITableVi
         ref?.observe(.value, with: {(snapshot) in
             for i in self.userListsDisplayed..<self.totalUserLists{
                 if(snapshot.childSnapshot(forPath: "Users").childSnapshot(forPath: id).childSnapshot(forPath: "UserLists").childSnapshot(forPath: "UserList_\(i+1)").exists()){
-                    let List = OronTestList(snapshot.childSnapshot(forPath: "Lists").childSnapshot(forPath: (snapshot.childSnapshot(forPath: "Users").childSnapshot(forPath: id).childSnapshot(forPath: "UserLists").childSnapshot(forPath: "UserList_\(i+1)").value as? String)!))
+                    let List = OronTestList(snapshot.childSnapshot(forPath: "Lists").childSnapshot(forPath: (snapshot.childSnapshot(forPath: "Users").childSnapshot(forPath: id).childSnapshot(forPath: "UserLists").childSnapshot(forPath: "UserList_\(i+1)").value as? String)!), listname: "List_\(i+1)")
                     self.listData.append(List)
                     self.listTableView.reloadData()
                     self.userListsDisplayed += 1
@@ -63,6 +63,13 @@ class HomeScreenViewController: UIViewController, UITableViewDelegate, UITableVi
         cell?.textLabel?.text = listData[indexPath.row].name
         
         return cell!
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print (listData[indexPath.row].num)
+        let board = UIStoryboard(name: "list", bundle: self.nibBundle)
+        let controller = board.instantiateInitialViewController() as! neweditController
+        controller.dataget = (listData[indexPath.row].num)
+        self.present(controller,animated: false)
     }
     
     

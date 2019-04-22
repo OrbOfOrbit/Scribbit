@@ -171,7 +171,7 @@ class neweditController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if (indexPath.row != basiclist?.items.count && (basiclist?.items[indexPath.row].type)! == true) {
-            let board = UIStoryboard(name: "newlist", bundle: self.nibBundle)
+            let board = UIStoryboard(name: "list", bundle: self.nibBundle)
             let controller = board.instantiateInitialViewController() as! neweditController
             controller.dataget=String((basiclist?.items[indexPath.row].stuff)!)
             ref?.child("Lists").child(dataget).child("Items").removeAllObservers()

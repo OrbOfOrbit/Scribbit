@@ -11,6 +11,7 @@ import FirebaseDatabase
 class OronTestList {
     
     var name : String
+    var num  : String
     //    var contributors = [String]()
     //    var dateCreated : Date
     //    var items = [String]()
@@ -19,9 +20,10 @@ class OronTestList {
     //        self.init("Untitled")
     //    }
     
-    init(_ snap: DataSnapshot){
+    init(_ snap: DataSnapshot, listname:String){
         var name = "Untitled"
-        
+        var num = ""
+        num = listname
         name = (snap.childSnapshot(forPath: "Name").value as? String)!
         //        .child("Name").observeSingleEvent(of: .value, with: {(snapshot) in
         //
@@ -31,5 +33,6 @@ class OronTestList {
         //        })
         
         self.name = name
+        self.num = num
     }
 }
