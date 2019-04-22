@@ -18,6 +18,12 @@ class HomeScreenViewController: UIViewController, UITableViewDelegate, UITableVi
     var userListsDisplayed = 0
     var totalUserLists = 0
     
+    @IBAction func signOut(_ sender: UIButton) {
+        try! Auth.auth().signOut()
+        self.dismiss(animated:false, completion: nil)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
