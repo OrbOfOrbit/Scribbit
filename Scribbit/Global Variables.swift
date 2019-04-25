@@ -62,9 +62,12 @@ class colorChoices{
     
 }
 
+
 struct globalVariables{
     
-    public static var listToShare = "List_2"
+    //set this variable to the list you're trying to share in the homescrenestoryboard. Then it will be accessed
+    // by the sharelistviewcontroller
+    public static var listToShare = "List_5"
     
 }
     
