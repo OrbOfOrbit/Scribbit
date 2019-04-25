@@ -27,7 +27,23 @@ class newlistViewController: UIViewController {
             
         })
         })
-        
+        self.ref!.child("Users").child(id).observeSingleEvent(of:.value, with: {(snapshot) in
+            
+            var l = snapshot.childSnapshot(forPath: "Total_Lists_Created").value as! Int
+            l = l + 1
+            self.ref?.child("Users").child(self.id).child("Total_Lists_Created").setValue(l)
+            
+            
+        })
+        self.ref!.child("Lists").observeSingleEvent(of:.value, with: {(snapshot) in
+            
+            var l = snapshot.childSnapshot(forPath: "Total_Lists_Created").value as! Int
+            l = l + 1
+            self.ref?.child("Lists").child("Total_Lists_Created").setValue(l)
+            
+            
+        })
+
 
         
         self.dismiss(animated: false, completion: nil)

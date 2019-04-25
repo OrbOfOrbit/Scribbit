@@ -218,6 +218,11 @@ class neweditController: UITableViewController {
                         self.tableView.reloadData()
                     }
                 })
+                rev.child("Lists").observeSingleEvent(of:.value, with: {(snapshot) in
+                    let l = snapshot.childSnapshot(forPath:"Total_Lists_Created").value as! Int + 1
+                    rev.child("Lists").child("Total_Lists_Created").setValue(l)
+                    
+                })
                 b.stuff=editstringiterator
                 self.basiclist?.items.append(b)
                 DispatchQueue.main.async {
