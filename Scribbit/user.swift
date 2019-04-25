@@ -7,3 +7,14 @@
 //
 
 import Foundation
+import FirebaseAuth
+
+class user{
+    var userID:String?
+    var email:String?
+    
+    init(userID:String?, email:String?) {
+        self.userID = userID
+        self.email = email
+    }
+}

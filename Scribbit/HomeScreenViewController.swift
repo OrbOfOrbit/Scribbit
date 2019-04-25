@@ -17,6 +17,7 @@ class HomeScreenViewController: UIViewController, UITableViewDelegate, UITableVi
     var databaseHandle: DatabaseHandle?
     var userListsDisplayed = 0
     var totalUserLists = 0
+
     
     @IBAction func signOut(_ sender: UIButton) {
         try! Auth.auth().signOut()

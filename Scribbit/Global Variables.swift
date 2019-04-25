@@ -27,7 +27,6 @@ class colorChoices{
     
     
     
-    
     public static var fgColor :UIColor{
         get{
             if(currentTheme){
@@ -59,6 +58,13 @@ class colorChoices{
     
     
     
+    
+    
+}
+
+struct globalVariables{
+    
+    public static var listToShare = "List_2"
     
 }
     

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0A0B6D1E21E9251600D222F9 /* Global Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0B6D1D21E9251600D222F9 /* Global Variables.swift */; };
+		0A687A40226E238A00BC6B14 /* ShareList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A687A3F226E238A00BC6B14 /* ShareList.storyboard */; };
+		0A687A42226E24A800BC6B14 /* ShareListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A687A41226E24A800BC6B14 /* ShareListViewController.swift */; };
+		0A687A442270DF8B00BC6B14 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A687A432270DF8B00BC6B14 /* user.swift */; };
 		0A7969DA220CAB9100B65D6F /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7969D9220CAB9100B65D6F /* AuthViewController.swift */; };
 		0A7C2268225E58EF00ECA601 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7C2267225E58EF00ECA601 /* SettingsViewController.swift */; };
 		0A7C226A225FB7C000ECA601 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7C2269225FB7C000ECA601 /* HomeScreenViewController.swift */; };
@@ -55,6 +58,9 @@
 
 /* Begin PBXFileReference section */
 		0A0B6D1D21E9251600D222F9 /* Global Variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Global Variables.swift"; sourceTree = "<group>"; };
+		0A687A3F226E238A00BC6B14 /* ShareList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShareList.storyboard; sourceTree = "<group>"; };
+		0A687A41226E24A800BC6B14 /* ShareListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareListViewController.swift; sourceTree = "<group>"; };
+		0A687A432270DF8B00BC6B14 /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
 		0A7969D9220CAB9100B65D6F /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		0A7C2267225E58EF00ECA601 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0A7C2269225FB7C000ECA601 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
@@ -169,6 +175,9 @@
 				C2D3DA7A21DE7D0E009904BF /* Main.storyboard */,
 				0A7C2269225FB7C000ECA601 /* HomeScreenViewController.swift */,
 				0A7C226B225FB82E00ECA601 /* HomeScreenStoryboard.storyboard */,
+				0A687A3F226E238A00BC6B14 /* ShareList.storyboard */,
+				0A687A41226E24A800BC6B14 /* ShareListViewController.swift */,
+				0A687A432270DF8B00BC6B14 /* user.swift */,
 				0A7C226D225FB8FF00ECA601 /* OronTestList.swift */,
 				0A7C2267225E58EF00ECA601 /* SettingsViewController.swift */,
 				0ACCE1C7222635960062C0EC /* AllLists.storyboard */,
@@ -312,6 +321,7 @@
 				9EA5559D221F17A600782F16 /* initiatelist.storyboard in Resources */,
 				0ACCE1C8222635960062C0EC /* AllLists.storyboard in Resources */,
 				0AE5D39F2210CEC500E655D4 /* list.storyboard in Resources */,
+				0A687A40226E238A00BC6B14 /* ShareList.storyboard in Resources */,
 				C2730FDC2208BE2A006D3A1B /* GoogleService-Info.plist in Resources */,
 				C2D3DA7E21DE7D10009904BF /* Assets.xcassets in Resources */,
 				0A7C226C225FB82E00ECA601 /* HomeScreenStoryboard.storyboard in Resources */,
@@ -390,8 +400,10 @@
 			files = (
 				0AE5D3A12210D3CA00E655D4 /* editviewcontroller.swift in Sources */,
 				0AE5D39B2210CEC500E655D4 /* list.swift in Sources */,
+				0A687A42226E24A800BC6B14 /* ShareListViewController.swift in Sources */,
 				0A7C2268225E58EF00ECA601 /* SettingsViewController.swift in Sources */,
 				0ACCE1CA222637390062C0EC /* AllListsViewController.swift in Sources */,
+				0A687A442270DF8B00BC6B14 /* user.swift in Sources */,
 				C29A4DAE21EFB1AF0084E5BE /* LoginViewController.swift in Sources */,
 				0A7C226A225FB7C000ECA601 /* HomeScreenViewController.swift in Sources */,
 				C2D3DA7921DE7D0E009904BF /* ViewController.swift in Sources */,
