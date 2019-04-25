@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JQ9-aa-VfJ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Newlist View Controller-->
+        <scene sceneID="2WM-cb-IKP">
+            <objects>
+                <viewController id="JQ9-aa-VfJ" customClass="newlistViewController" customModule="Scribbit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IbR-sU-U4f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oyj-gU-NoB">
+                                <rect key="frame" x="157.5" y="566" width="60" height="30"/>
+                                <state key="normal" title="New List"/>
+                                <connections>
+                                    <action selector="create:" destination="JQ9-aa-VfJ" eventType="touchUpInside" id="xyn-JA-lwL"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fUj-NI-v82">
+                                <rect key="frame" x="0.0" y="75" width="375" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4D3-GE-Igd">
+                                <rect key="frame" x="24" y="46" width="34" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oyj-gU-NoB" firstAttribute="centerX" secondItem="Ape-um-287" secondAttribute="centerX" id="AMJ-pV-gJD"/>
+                            <constraint firstItem="Ape-um-287" firstAttribute="trailing" secondItem="4D3-GE-Igd" secondAttribute="trailing" constant="317" id="N0D-jU-Luu"/>
+                            <constraint firstItem="fUj-NI-v82" firstAttribute="top" secondItem="Ape-um-287" secondAttribute="top" constant="55" id="NV1-KS-bym"/>
+                            <constraint firstItem="oyj-gU-NoB" firstAttribute="top" secondItem="fUj-NI-v82" secondAttribute="bottom" constant="461" id="P6j-aT-DVr"/>
+                            <constraint firstItem="fUj-NI-v82" firstAttribute="leading" secondItem="Ape-um-287" secondAttribute="leading" id="ViK-uA-c3k"/>
+                            <constraint firstItem="4D3-GE-Igd" firstAttribute="top" secondItem="Ape-um-287" secondAttribute="top" constant="26" id="Xu8-AE-lPN"/>
+                            <constraint firstItem="Ape-um-287" firstAttribute="bottom" secondItem="oyj-gU-NoB" secondAttribute="bottom" constant="71" id="tww-0h-aXu"/>
+                            <constraint firstItem="Ape-um-287" firstAttribute="trailing" secondItem="fUj-NI-v82" secondAttribute="trailing" id="wsD-1G-WjQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ape-um-287"/>
+                    </view>
+                    <connections>
+                        <outlet property="textfield" destination="fUj-NI-v82" id="ZQn-zj-J6C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TH7-eL-f4D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="168.80000000000001" y="-145.27736131934034"/>
+        </scene>
+    </scenes>
+</document>

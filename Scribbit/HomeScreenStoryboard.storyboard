@@ -37,19 +37,29 @@
                                     </tableView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQb-7C-7mc">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQb-7C-7mc">
                                 <rect key="frame" x="22" y="35" width="55" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Log Out"/>
                                 <connections>
                                     <action selector="signOut:" destination="R8q-35-w0U" eventType="touchUpInside" id="XJa-LC-nSw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E2g-jo-evH">
+                                <rect key="frame" x="310" y="35" width="52" height="30"/>
+                                <state key="normal" title="new list"/>
+                                <connections>
+                                    <action selector="newlist:" destination="R8q-35-w0U" eventType="touchUpInside" id="CSB-G3-yho"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="udI-Ql-VSd" firstAttribute="leading" secondItem="nmq-CY-6jL" secondAttribute="leading" id="887-BD-RvS"/>
+                            <constraint firstItem="nmq-CY-6jL" firstAttribute="trailing" secondItem="E2g-jo-evH" secondAttribute="trailing" constant="13" id="JVZ-Et-u2b"/>
+                            <constraint firstItem="E2g-jo-evH" firstAttribute="top" secondItem="nmq-CY-6jL" secondAttribute="top" constant="15" id="TuO-tc-fIV"/>
                             <constraint firstItem="nmq-CY-6jL" firstAttribute="trailing" secondItem="udI-Ql-VSd" secondAttribute="trailing" id="WZX-rG-4Ni"/>
+                            <constraint firstItem="E2g-jo-evH" firstAttribute="leading" secondItem="bQb-7C-7mc" secondAttribute="trailing" constant="233" id="bwl-xd-UmQ"/>
+                            <constraint firstItem="bQb-7C-7mc" firstAttribute="top" secondItem="nmq-CY-6jL" secondAttribute="top" constant="15" id="gyT-UO-4Bm"/>
                             <constraint firstItem="udI-Ql-VSd" firstAttribute="top" secondItem="nmq-CY-6jL" secondAttribute="top" constant="40" id="sps-e7-6O1"/>
                             <constraint firstItem="udI-Ql-VSd" firstAttribute="bottom" secondItem="nmq-CY-6jL" secondAttribute="bottom" id="uQq-jS-jFW"/>
                         </constraints>

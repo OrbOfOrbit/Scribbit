@@ -20,18 +20,12 @@ class OronTestList {
     //        self.init("Untitled")
     //    }
     
-    init(_ snap: DataSnapshot, listname:String){
-        var name = "Untitled"
+    init(_ snap: String, listname:String){
+        var ref = Database.database().reference()
+        var name = "Loading"
         var num = ""
         num = listname
-        name = (snap.childSnapshot(forPath: "Name").value as? String)!
-        //        .child("Name").observeSingleEvent(of: .value, with: {(snapshot) in
-        //
-        //            print("test")
-        //            name = (snapshot.value as? String)!
-        //
-        //        })
-        
+        name = snap
         self.name = name
         self.num = num
     }

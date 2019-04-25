@@ -44,6 +44,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate{
                     print("couldn't change name")
                     
                 })
+                
                 self.dismiss(animated: true, completion: nil)
             }
                 
