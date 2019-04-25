@@ -27,7 +27,6 @@ class colorChoices{
     
     
     
-    
     public static var fgColor :UIColor{
         get{
             if(currentTheme){
@@ -60,5 +59,15 @@ class colorChoices{
     
     
     
-}
     
+}
+
+
+struct globalVariables{
+    
+    //set this variable to the list you're trying to share in the homescrenestoryboard. Then it will be accessed
+    // by the sharelistviewcontroller
+    public static var listToShare = "List_5"
+    
+}
+

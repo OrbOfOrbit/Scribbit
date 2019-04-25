@@ -11,7 +11,7 @@ import FirebaseAuth
 
 class HomeScreenViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     @IBOutlet weak var listTableView: UITableView!
-    
+    var nam:String?
     var listData = [OronTestList]()
     var ref: DatabaseReference?
     var databaseHandle: DatabaseHandle?
@@ -23,7 +23,37 @@ class HomeScreenViewController: UIViewController, UITableViewDelegate, UITableVi
         self.dismiss(animated:false, completion: nil)
     }
     
-    
+    @IBAction func newlist(_ sender: Any) {
+        listData = [OronTestList]()
+        let board = UIStoryboard(name: "newlist", bundle: self.nibBundle)
+        let controller = board.instantiateInitialViewController() as! newlistViewController
+        self.present(controller, animated: false)
+    }
+    func gaming(id:String){
+        let snoshot = ref!.child("Users").child(id)
+        var maxlist = 1
+        var stringiterator = "List_1"
+        snoshot.child("Total_Lists_Created").setValue(1)
+        ref?.child("Lists").observe(.value, with: {(snapshot) in
+            
+            
+            while (snapshot.childSnapshot(forPath: stringiterator).exists()){
+                maxlist = maxlist + 1
+                
+                stringiterator = String(stringiterator.dropLast())
+                stringiterator.append(String(maxlist))
+            }})
+        stringiterator = String(stringiterator.dropLast())
+        stringiterator.append(String(maxlist+2))
+        
+        snoshot.child("UserLists").child("Userlist_1").setValue(stringiterator)
+        let b = ref?.child("Lists").child(stringiterator)
+        b?.child("Name").setValue("welcome to scribbit!")
+        let formatteddate = DateFormatter()
+        formatteddate.dateStyle = .long
+        formatteddate.timeStyle = .long
+        b?.child("Last_Edited").setValue(formatteddate.string(from: Date.init()))
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,21 +65,53 @@ class HomeScreenViewController: UIViewController, UITableViewDelegate, UITableVi
         let id = (Auth.auth().currentUser?.uid)!
         
         ref?.child("Users").child(id).child("Total_Lists_Created").observe(.value, with: {(snapshot) in
-            self.totalUserLists = (snapshot.value as? Int)!
+            if snapshot.exists(){
+                self.totalUserLists = (snapshot.value as? Int)!
+            }
+            else {
+                self.gaming(id: id)
+            }
         })
-        
-        ref?.observe(.value, with: {(snapshot) in
-            for i in self.userListsDisplayed..<self.totalUserLists{
-                if(snapshot.childSnapshot(forPath: "Users").childSnapshot(forPath: id).childSnapshot(forPath: "UserLists").childSnapshot(forPath: "UserList_\(i+1)").exists()){
-                    let List = OronTestList(snapshot.childSnapshot(forPath: "Lists").childSnapshot(forPath: (snapshot.childSnapshot(forPath: "Users").childSnapshot(forPath: id).childSnapshot(forPath: "UserLists").childSnapshot(forPath: "UserList_\(i+1)").value as? String)!), listname: "List_\(i+1)")
-                    self.listData.append(List)
-                    self.listTableView.reloadData()
-                    self.userListsDisplayed += 1
-                }
+        ref?.child("Users").child(id).child("UserLists").observe(.value, with: {(snapshot) in
+            var stringiterator = "UserList_1"
+            var i = 1
+            print(snapshot.childSnapshot(forPath: stringiterator).exists())
+            while snapshot.childSnapshot(forPath: stringiterator).exists(){
+                let veter = snapshot.childSnapshot(forPath: stringiterator).value as! String
                 
+                let list = OronTestList(veter, listname: veter)
+                self.listData.append(list)
+                print("monky")
+                DispatchQueue.main.async {
+                    self.listTableView.reloadData()
+                }
+                self.userListsDisplayed += 1
+                i = i + 1
+                
+                stringiterator = String(stringiterator.dropLast())
+                stringiterator.append(String(i))
+            }
+            DispatchQueue.main.async {
+                self.listTableView.reloadData()
             }
             
+            
+            
         })
+        
+        //ref?.observe(.value, with: {(snapshot) in
+        /* for i in self.userListsDisplayed..<self.totalUserLists{
+         if(snapshot.childSnapshot(forPath: "Users").childSnapshot(forPath: id).childSnapshot(forPath: "UserLists").childSnapshot(forPath: "UserList_\(i+1)").exists()){
+         let List = OronTestList(snapshot.childSnapshot(forPath: "Lists").childSnapshot(forPath: (snapshot.childSnapshot(forPath: "Users").childSnapshot(forPath: id).childSnapshot(forPath: "UserLists").childSnapshot(forPath: "UserList_\(i+1)").value as? String)!), listname: "List_\(i+1)")
+         self.listData.append(List)
+         self.listTableView.reloadData()
+         self.userListsDisplayed += 1
+         }
+         
+         }*/
+        
+        
+        //})
         
         
     }
@@ -60,9 +122,22 @@ class HomeScreenViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListTableCell")
-        cell?.textLabel?.text = listData[indexPath.row].name
         
+        someMethod(completion: {(gamer) in
+            cell?.textLabel?.text = self.nam
+        } , i: indexPath.row)
+        cell?.textLabel?.text="loading"
         return cell!
+        
+        
+    }
+    func someMethod(completion: @escaping (Bool) -> (), i:Int){
+        ref?.child("Lists").child(listData[i].name).observe (.value, with: {(snapshot:DataSnapshot) in
+            self.nam = snapshot.childSnapshot(forPath: "Name").value as! String
+            
+            completion(true)
+        })
+        
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print (listData[indexPath.row].num)

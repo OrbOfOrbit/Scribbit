@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0A0B6D1E21E9251600D222F9 /* Global Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0B6D1D21E9251600D222F9 /* Global Variables.swift */; };
+		0A21BFFA2272571D00650A0C /* newlistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A21BFF92272571D00650A0C /* newlistViewController.swift */; };
+		0A21BFFC2272575A00650A0C /* newlist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A21BFFB2272575A00650A0C /* newlist.storyboard */; };
+		0A21BFFE2272583C00650A0C /* ShareListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A21BFFD2272583C00650A0C /* ShareListViewController.swift */; };
+		0A21C0022272588300650A0C /* ShareList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A21C0012272588300650A0C /* ShareList.storyboard */; };
 		0A7969DA220CAB9100B65D6F /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7969D9220CAB9100B65D6F /* AuthViewController.swift */; };
 		0A7C2268225E58EF00ECA601 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7C2267225E58EF00ECA601 /* SettingsViewController.swift */; };
 		0A7C226A225FB7C000ECA601 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7C2269225FB7C000ECA601 /* HomeScreenViewController.swift */; };
@@ -55,6 +59,10 @@
 
 /* Begin PBXFileReference section */
 		0A0B6D1D21E9251600D222F9 /* Global Variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Global Variables.swift"; sourceTree = "<group>"; };
+		0A21BFF92272571D00650A0C /* newlistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newlistViewController.swift; sourceTree = "<group>"; };
+		0A21BFFB2272575A00650A0C /* newlist.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = newlist.storyboard; sourceTree = "<group>"; };
+		0A21BFFD2272583C00650A0C /* ShareListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareListViewController.swift; sourceTree = "<group>"; };
+		0A21C0012272588300650A0C /* ShareList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShareList.storyboard; sourceTree = "<group>"; };
 		0A7969D9220CAB9100B65D6F /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		0A7C2267225E58EF00ECA601 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0A7C2269225FB7C000ECA601 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +171,8 @@
 				0AE5D3A02210D3CA00E655D4 /* editviewcontroller.swift */,
 				0AE5D39A2210CEC500E655D4 /* list.storyboard */,
 				0AE5D3962210CEC400E655D4 /* list.swift */,
+				0A21BFF92272571D00650A0C /* newlistViewController.swift */,
+				0A21BFFB2272575A00650A0C /* newlist.storyboard */,
 				0A7969D9220CAB9100B65D6F /* AuthViewController.swift */,
 				C29A4DAD21EFB1AF0084E5BE /* LoginViewController.swift */,
 				C29A4E2921F202B20084E5BE /* SignUpViewController.swift */,
@@ -177,9 +187,11 @@
 				C2D3DA7D21DE7D10009904BF /* Assets.xcassets */,
 				C2D3DA7F21DE7D10009904BF /* LaunchScreen.storyboard */,
 				0A0B6D1D21E9251600D222F9 /* Global Variables.swift */,
+				0A21BFFD2272583C00650A0C /* ShareListViewController.swift */,
 				C2D3DA8221DE7D10009904BF /* Info.plist */,
 				C2730FDB2208BE2A006D3A1B /* GoogleService-Info.plist */,
 				9EA5559C221F17A600782F16 /* initiatelist.storyboard */,
+				0A21C0012272588300650A0C /* ShareList.storyboard */,
 			);
 			path = Scribbit;
 			sourceTree = "<group>";
@@ -315,7 +327,9 @@
 				C2730FDC2208BE2A006D3A1B /* GoogleService-Info.plist in Resources */,
 				C2D3DA7E21DE7D10009904BF /* Assets.xcassets in Resources */,
 				0A7C226C225FB82E00ECA601 /* HomeScreenStoryboard.storyboard in Resources */,
+				0A21BFFC2272575A00650A0C /* newlist.storyboard in Resources */,
 				C2D3DA7C21DE7D0E009904BF /* Main.storyboard in Resources */,
+				0A21C0022272588300650A0C /* ShareList.storyboard in Resources */,
 				C2730FE0220C99D4006D3A1B /* Authentication.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,12 +407,14 @@
 				0A7C2268225E58EF00ECA601 /* SettingsViewController.swift in Sources */,
 				0ACCE1CA222637390062C0EC /* AllListsViewController.swift in Sources */,
 				C29A4DAE21EFB1AF0084E5BE /* LoginViewController.swift in Sources */,
+				0A21BFFE2272583C00650A0C /* ShareListViewController.swift in Sources */,
 				0A7C226A225FB7C000ECA601 /* HomeScreenViewController.swift in Sources */,
 				C2D3DA7921DE7D0E009904BF /* ViewController.swift in Sources */,
 				0A7969DA220CAB9100B65D6F /* AuthViewController.swift in Sources */,
 				0AE5D39D2210CEC500E655D4 /* item.swift in Sources */,
 				0A7C226E225FB8FF00ECA601 /* OronTestList.swift in Sources */,
 				C29A4E2A21F202B20084E5BE /* SignUpViewController.swift in Sources */,
+				0A21BFFA2272571D00650A0C /* newlistViewController.swift in Sources */,
 				C2D3DA7721DE7D0E009904BF /* AppDelegate.swift in Sources */,
 				0A0B6D1E21E9251600D222F9 /* Global Variables.swift in Sources */,
 			);

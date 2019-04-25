@@ -5,7 +5,6 @@
 //  Created by Oron Barash (student LM) on 1/18/19.
 //  Copyright © 2019 Oron Barash (student LM). All rights reserved.
 //
-
 import UIKit
 import FirebaseAuth
 
@@ -44,6 +43,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate{
                     print("couldn't change name")
                     
                 })
+                
                 self.dismiss(animated: true, completion: nil)
             }
                 
