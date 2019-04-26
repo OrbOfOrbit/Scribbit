@@ -8,9 +8,9 @@
 
 import Foundation
 class newlist {
-    var created:Date
-    var items:[newitem]
-    var title:String
+    var created:Date//the date when it was last acsessed,
+    var items:[newitem]//the collection of items in the list
+    var title:String//the title of the list
     init(newitems:[newitem], newtitle:String, newcreated:Date) {
         created=newcreated
         items=newitems

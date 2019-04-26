@@ -19,11 +19,11 @@ class OronTestList {
     //    convenience init(){
     //        self.init("Untitled")
     //    }
-    
+    //
     init(_ snap: String, listname:String){
         var ref = Database.database().reference()
-        var name = "Loading"
-        var num = ""
+        var name = "Loading"//this is a defualt value that gets changed when firebase loads.
+        var num = "" //this is a default value that gets changed when firebase loads.
         num = listname
         name = snap
         self.name = name

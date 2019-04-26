@@ -16,6 +16,7 @@ class neweditController: UITableViewController {
     var basiclist:newlist?
     var listdate = [String]()
     var dataget="List_1"
+    //the code for initializing the gesture recognizer, all background elements and the table view go here
     override func viewDidLoad() {
         tableview.backgroundColor = .green
         view.backgroundColor = .green
@@ -69,6 +70,8 @@ class neweditController: UITableViewController {
     }
     
     // MARK: - Table view data source
+    //this func has one purpose only: recognize the long tap gesture the change an items title.
+    
     @objc func longtap(recognizer: UITapGestureRecognizer){
         
         if recognizer.state == UIGestureRecognizerState.ended {
@@ -116,7 +119,7 @@ class neweditController: UITableViewController {
         return basiclist!.items.count+1
     }
     
-    
+    //the cells get their data from the basiclist
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "gamer", for: indexPath)
         
@@ -147,6 +150,7 @@ class neweditController: UITableViewController {
             return true}
         return false
     }
+    //this code is used to make the table view cells movable. the buffer is used as storage to keep the list in order.
     override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         let  buffer = basiclist?.items[destinationIndexPath.row]
         basiclist?.items[destinationIndexPath.row] = (basiclist?.items[sourceIndexPath.row])!
@@ -155,6 +159,7 @@ class neweditController: UITableViewController {
         
         
     }
+    //this code prevents you from changing to bottom cell, which is always the add more button
     override func tableView(_ tableView: UITableView, targetIndexPathForMoveFromRowAt sourceIndexPath: IndexPath, toProposedIndexPath proposedDestinationIndexPath: IndexPath) -> IndexPath {
         if proposedDestinationIndexPath.row == (basiclist?.items.count)! {
             return IndexPath(row: proposedDestinationIndexPath.row - 1, section: proposedDestinationIndexPath.section)
@@ -162,7 +167,7 @@ class neweditController: UITableViewController {
             return proposedDestinationIndexPath
         }
     }
-    
+    //this code is called when you hit the delete button in the tableview
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if indexPath.row != basiclist?.items.count{
             basiclist?.items.remove(at: indexPath.row)}
@@ -173,7 +178,9 @@ class neweditController: UITableViewController {
             //                    self.ref?.child("Lists").childByAutoId().setValue(self.basiclist.items)
         }
     }
+    //this long piece one is for tapping any table
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //this is the code for if you hit a list. the for loop is so your changes are saved in the original
         if (indexPath.row != basiclist?.items.count && (basiclist?.items[indexPath.row].type)! == true) {
             ref?.child("Lists").child(dataget).child("Items").removeAllObservers()
             ref?.removeAllObservers()
@@ -210,11 +217,12 @@ class neweditController: UITableViewController {
             self.viewDidLoad()
             
         }
-            
+            //this is for if you hit a normal item
         else if indexPath.row != basiclist?.items.count{
             basiclist?.items[indexPath.row].done.toggle()
             
         }
+            //this is for if you ht the add item button.
         else {
             let alert = UIAlertController(title: "add item", message: "", preferredStyle: .alert)
             alert.addTextField { (textField) in
@@ -280,6 +288,7 @@ class neweditController: UITableViewController {
     override func becomeFirstResponder() -> Bool {
         return true
     }
+    //this code is for saving and closingthe list when you shake.
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         
         if motion == .motionShake {

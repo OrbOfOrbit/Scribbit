@@ -39,6 +39,7 @@ class AuthViewController: UIViewController {
     //        let vc = storyboard.instantiateViewController(withIdentifier: "ListViewController") as UIViewController
     //        present(vc, animated: true, completion: nil)
     //    }
+    //this is the autologin feature, do not touch
     override func viewDidAppear(_ animated: Bool) {
         if let _ = Auth.auth().currentUser{
             let board = UIStoryboard(name: "HomeScreenStoryboard", bundle: self.nibBundle)

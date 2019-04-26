@@ -17,10 +17,10 @@ class newlistViewController: UIViewController {
     let id = (Auth.auth().currentUser?.uid)!
     @IBAction func create(_ sender: UIButton) {
         getnumber(completion: {(l) in
-            print("y")
+    
             print(self.stringiterator)
             self.getlist(completion: {(p) in
-                print("c")
+       
                 self.ref?.child("Lists").child(self.stringiterator).child("Name").setValue(self.textfield.text ?? "untitled list")
                 self.ref?.child("Users").child(self.id).child("UserLists").child(self.useriterator).setValue(self.stringiterator)
                 
@@ -47,6 +47,7 @@ class newlistViewController: UIViewController {
         
         self.dismiss(animated: false, completion: nil)
     }
+    //this function is just a neat trick i leanred no make firebase complete in sync instead of asynchornously, it just gets the next usable number for list sorting.
     func getnumber (completion: @escaping (Bool) -> ()){
         
         ref!.child("Lists").observeSingleEvent(of:.value, with: {(snapshot) in
@@ -64,6 +65,7 @@ class newlistViewController: UIViewController {
         
         
     }
+    //this does the same thing, but for lists the user is allowed to acsess.
     func getlist (completion: @escaping (Bool) -> ()){
         
         ref!.child("Users").child(id).child("UserLists").observeSingleEvent(of:.value, with: {(snapshot) in

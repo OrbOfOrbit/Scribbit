@@ -8,8 +8,8 @@
 
 import Foundation
 class newitem{
-    var done:Bool
-    var type:Bool
+    var done:Bool//the value
+    var type:Bool//whether or not it is a list or another item.
     var value:String
     var stuff="gaming"
     
