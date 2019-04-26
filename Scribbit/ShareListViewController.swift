@@ -18,6 +18,7 @@ class ShareListViewController: UIViewController,UITableViewDelegate,UITableViewD
         return users.count
     }
     
+    //creates the tableview that shows each user
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "shamer", for: indexPath)
         ref?.child("Users").observeSingleEvent(of: .value, with: {(snapshot) in
@@ -82,32 +83,6 @@ class ShareListViewController: UIViewController,UITableViewDelegate,UITableViewD
         //  to put all of the userids under users into an array, then put each of the usernames from that userid
         //  into a tableview.
         
-        //update:   email seems like a needlessly complicated way of setting this up. I'm going to simplify things
-        //  a bit. I'm just going to set up code such that the desired user id is found and then the new list
-        //  is added. I'll work with alex to do the tableview part later, because I'd rather not waste a ton of
-        //  time relearning tableviews when Alex is already well versed in that, and could probably help me
-        //  set it up in around half an hour.
-        //      A possible bug I've realized is that if the user were able to add lists to any user id, then
-        //  the user could add the same list to their user id... multiple times. I guess I'll resolve this by
-        //  checking if the user id selected by the user is the same as their own user id. I'm not going to
-        //  set it up so that the user id doesn't appear in the tableview, however, because while that would seem
-        //  more sensible, realistically speaking I'm not going to be able to implement that in time. Corners have
-        //  to be cut.
-        //      It's already 8:35 on the Wednesday before this project is due. I can probably finish this basic
-        //  version tonight, with corners cut. Implemeting tableviews will require further work with Alex tomorrow.
-        //  I can definitely finish the Share List view controller... But even then, more work has yet to be done.
-        //  Bugtests could bring tons of unforseeable changes. Not to mention that we have to implement Aesthetic
-        //  changes, which means (A) creating both color themes and (B) implementing a multitude of changes to the
-        //  view controllers to make them appealing. To make matters worse, we don't have computer science class
-        //  tomorrow and Oron, who is working on aesthetic changes, is preoccupied with players. Even if Oron
-        //  somehow manages to finalize the aesthetics, can he implement them on time? If the share list controller
-        //  is finished, I can take on implementing the theme changes into every storyboard. Shouldn't be of extreme
-        //  difficulty. But we'll see. Either way, we're screwed unless there's a miracle between now and friday.
-        //  The only miracle I can concieve of is that Mr. Swope allows us to continue working on the project until
-        //  Monday. I feel like I've heard other groups saying they'll need the weekend, but I can neither be sure
-        //  nore know if Mr. Swope will even allow them to do so. If we can keep working until Monday, it'd be a
-        //  godsend, but even then we'd still need to spend the entirety of Saturday and Sunday working in order
-        //  to complete the project.
         
         ref = Database.database().reference()
         
@@ -161,14 +136,6 @@ class ShareListViewController: UIViewController,UITableViewDelegate,UITableViewD
         //  We probably have code for adding a list to a user already, I just need to copy that and appropriate it
         //  here
         
-        //      If all of that is done it should work. Try to minimize difficulty by using what code is already
-        //  written; a lot of this should already exist. Luckily, since ownership isn't differentiated we shouldn't
-        //  need to worry about anything else: the list will appear in the user's accessible lists
-        
-        //      Debugging will probably be very difficult if anything goes wrong. My hope is that because we're
-        //  reusing a lot of code this risk should be minimized but you never know. I think that the way we'll have
-        //  to test this is by creating a new user with no lists assigned to them, and then sharing them using this
-        //  code.
         
         //first we need to make sure that the selected user isn't the user themself
         //        print(Auth.auth().currentUser?.uid)
