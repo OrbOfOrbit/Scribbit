@@ -21,6 +21,8 @@
 		0AE5D3A12210D3CA00E655D4 /* editviewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5D3A02210D3CA00E655D4 /* editviewcontroller.swift */; };
 		51DF1B48A339845513C14C8C /* Pods_Scribbit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9249620E5589A3B7EAE1587F /* Pods_Scribbit.framework */; };
 		9EA5559D221F17A600782F16 /* initiatelist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EA5559C221F17A600782F16 /* initiatelist.storyboard */; };
+		B373DAC5226F7CD500B272C7 /* NewStoryBoardWithAscticValue.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B373DAC4226F7CD500B272C7 /* NewStoryBoardWithAscticValue.storyboard */; };
+		B373DAC72270E1CF00B272C7 /* Screen Shot 2019-04-24 at 2.24.43 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = B373DAC62270E1CF00B272C7 /* Screen Shot 2019-04-24 at 2.24.43 PM.png */; };
 		C2730FDC2208BE2A006D3A1B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2730FDB2208BE2A006D3A1B /* GoogleService-Info.plist */; };
 		C2730FDD2208BE2A006D3A1B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2730FDB2208BE2A006D3A1B /* GoogleService-Info.plist */; };
 		C2730FDE2208BE2A006D3A1B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2730FDB2208BE2A006D3A1B /* GoogleService-Info.plist */; };
@@ -69,6 +71,8 @@
 		917CBED20CCF3966642404EA /* Pods-Scribbit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scribbit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Scribbit/Pods-Scribbit.debug.xcconfig"; sourceTree = "<group>"; };
 		9249620E5589A3B7EAE1587F /* Pods_Scribbit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scribbit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EA5559C221F17A600782F16 /* initiatelist.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = initiatelist.storyboard; sourceTree = "<group>"; };
+		B373DAC4226F7CD500B272C7 /* NewStoryBoardWithAscticValue.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewStoryBoardWithAscticValue.storyboard; sourceTree = "<group>"; };
+		B373DAC62270E1CF00B272C7 /* Screen Shot 2019-04-24 at 2.24.43 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2019-04-24 at 2.24.43 PM.png"; sourceTree = "<group>"; };
 		C2730FDB2208BE2A006D3A1B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C2730FDF220C99D4006D3A1B /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		C29A4DAD21EFB1AF0084E5BE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +161,7 @@
 		C2D3DA7521DE7D0E009904BF /* Scribbit */ = {
 			isa = PBXGroup;
 			children = (
+				B373DAC62270E1CF00B272C7 /* Screen Shot 2019-04-24 at 2.24.43 PM.png */,
 				C2D3DA7621DE7D0E009904BF /* AppDelegate.swift */,
 				C2D3DA7821DE7D0E009904BF /* ViewController.swift */,
 				0AE5D3982210CEC500E655D4 /* item.swift */,
@@ -167,6 +172,7 @@
 				C29A4DAD21EFB1AF0084E5BE /* LoginViewController.swift */,
 				C29A4E2921F202B20084E5BE /* SignUpViewController.swift */,
 				C2D3DA7A21DE7D0E009904BF /* Main.storyboard */,
+				B373DAC4226F7CD500B272C7 /* NewStoryBoardWithAscticValue.storyboard */,
 				0A7C2269225FB7C000ECA601 /* HomeScreenViewController.swift */,
 				0A7C226B225FB82E00ECA601 /* HomeScreenStoryboard.storyboard */,
 				0A7C226D225FB8FF00ECA601 /* OronTestList.swift */,
@@ -309,6 +315,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2D3DA8121DE7D10009904BF /* LaunchScreen.storyboard in Resources */,
+				B373DAC5226F7CD500B272C7 /* NewStoryBoardWithAscticValue.storyboard in Resources */,
+				B373DAC72270E1CF00B272C7 /* Screen Shot 2019-04-24 at 2.24.43 PM.png in Resources */,
 				9EA5559D221F17A600782F16 /* initiatelist.storyboard in Resources */,
 				0ACCE1C8222635960062C0EC /* AllLists.storyboard in Resources */,
 				0AE5D39F2210CEC500E655D4 /* list.storyboard in Resources */,
