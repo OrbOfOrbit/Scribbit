@@ -17,7 +17,18 @@ class HomeScreenViewController: UIViewController, UITableViewDelegate, UITableVi
     var databaseHandle: DatabaseHandle?
     var userListsDisplayed = 0
     var totalUserLists = 0
-    
+    @objc func longtap(recognizer: UITapGestureRecognizer){
+        
+        if recognizer.state == UIGestureRecognizerState.ended {
+            let tapLocation = recognizer.location(in: self.listTableView)
+            if let tapIndexPath = self.listTableView.indexPathForRow(at: tapLocation) {
+                 globalVariables.listToShare = listData[tapIndexPath.row].num
+                let board = UIStoryboard(name: "ShareList", bundle: self.nibBundle)
+                let controller = board.instantiateInitialViewController() as! ShareListViewController 
+                self.present(controller,animated: false)
+            }
+        }
+    }
     @IBAction func signOut(_ sender: UIButton) {
         try! Auth.auth().signOut()
         self.dismiss(animated:false, completion: nil)
@@ -55,8 +66,11 @@ class HomeScreenViewController: UIViewController, UITableViewDelegate, UITableVi
         b?.child("Last_Edited").setValue(formatteddate.string(from: Date.init()))
     }
     override func viewDidLoad() {
+        let longrecon = UILongPressGestureRecognizer(target: self, action: #selector(longtap))
+        listTableView.addGestureRecognizer(longrecon)
+        listTableView.backgroundColor = .green 
         super.viewDidLoad()
-        
+        view.backgroundColor = .green
         ref = Database.database().reference()
         
         listTableView.delegate = self
@@ -73,6 +87,7 @@ class HomeScreenViewController: UIViewController, UITableViewDelegate, UITableVi
             }
         })
         ref?.child("Users").child(id).child("UserLists").observe(.value, with: {(snapshot) in
+            self.listData=[OronTestList]()
             var stringiterator = "UserList_1"
             var i = 1
             print(snapshot.childSnapshot(forPath: stringiterator).exists())
@@ -122,7 +137,7 @@ class HomeScreenViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListTableCell")
-        
+        cell?.backgroundColor = UIColor.green 
         someMethod(completion: {(gamer) in
             cell?.textLabel?.text = self.nam
         } , i: indexPath.row)

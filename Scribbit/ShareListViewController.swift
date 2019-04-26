@@ -13,8 +13,55 @@ import FirebaseAuth
 var ref:DatabaseReference?
 var handle:DatabaseHandle?
 
-class ShareListViewController: UIViewController {
+class ShareListViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return users.count
+    }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "shamer", for: indexPath)
+        ref?.child("Users").observeSingleEvent(of: .value, with: {(snapshot) in
+            
+            cell.textLabel?.text = snapshot.childSnapshot(forPath: self.users[indexPath.row]).childSnapshot(forPath: "Name").value as! String
+
+        })
+       
+        return cell
+    }
+     var desiredList = globalVariables.listToShare
+      var selectedUser = ""
+      var users = [String]()
+    @IBAction func share(_ sender: Any) {
+        if selectedUser != Auth.auth().currentUser?.uid {
+            
+            //get the total number of userlists
+            var totalUserlists = 0
+            
+            //set total user lists equal to the total number of lists under that user
+            ref?.child("Users").child(selectedUser).child("Total_Lists_Created").observeSingleEvent(of: .value, with: { (snapshot) in
+                
+                totalUserlists = snapshot.value as! Int
+                
+                
+                //alex may have changed this. Alter it so that it works with his code.
+                //add one to the total number of userlists
+                totalUserlists = totalUserlists + 1
+                
+                ref?.child("Users").child(self.selectedUser).child("Total_Lists_Created").setValue(totalUserlists)
+                
+                //now share by adding it under their firebase
+                ref?.child("Users").child(self.selectedUser).child("UserLists").child("UserList_\(totalUserlists)").setValue(self.desiredList)
+                self.dismiss(animated: true, completion: nil)
+            })
+            
+            
+            
+        }
+    }
+    @IBAction func cancel(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    @IBOutlet weak var tableview: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,7 +72,7 @@ class ShareListViewController: UIViewController {
         //Part 0:   find which list is to be shared:
         //   My guess is that the easiest way to do this is create a global variable that, when a list is designated
         //  to be shared, is set equal to that list's name. For now I will just use a substitute
-        var desiredList = globalVariables.listToShare
+       
         
         //Part 1: List all available users
         //      first we want to access all of the available users, listing them by their user names
@@ -67,7 +114,7 @@ class ShareListViewController: UIViewController {
         ref?.child("Users").observe(.value, with: {(snapshot) in
             
             //loop through the children
-            var users = [String]()
+          
             
             for child in snapshot.children{
                 
@@ -82,7 +129,7 @@ class ShareListViewController: UIViewController {
                     //prevent the current user's id from being added to the list (they shouldn't be able
                     //  to share with themselves)
                     if childID != Auth.auth().currentUser?.uid{
-                        users.append(childID)
+                        self.users.append(childID)
                     }
                 }
                 
@@ -91,8 +138,13 @@ class ShareListViewController: UIViewController {
                 
                 
             }
+            DispatchQueue.main.async {
+                self.tableview.reloadData()
+            }
             
+           
         })
+        
             .self
         //Part 2: Choose a Useer
         //      once again, refrencing Alex's editlist code, create some sort of button or slider which designates
@@ -101,7 +153,7 @@ class ShareListViewController: UIViewController {
         //  and find the corresponding member of the userid array
         
         //we'll use the tableview to do this. for now, we'll just set it manually
-        var selectedUser = "dMMqNxkf7BbRaXksq6QaNG0E1ji2"
+      
         
         //Part 3: Share
         //      To share, just upload to firebase under users > the userid we just found > userlists. The name
@@ -120,30 +172,7 @@ class ShareListViewController: UIViewController {
         
         //first we need to make sure that the selected user isn't the user themself
         //        print(Auth.auth().currentUser?.uid)
-        if selectedUser != Auth.auth().currentUser?.uid {
-            
-            //get the total number of userlists
-            var totalUserlists = 0
-            
-            //set total user lists equal to the total number of lists under that user
-            ref?.child("Users").child(selectedUser).child("Total_Lists_Created").observeSingleEvent(of: .value, with: { (snapshot) in
-                
-                totalUserlists = snapshot.value as! Int
-                
-                
-                //alex may have changed this. Alter it so that it works with his code.
-                //add one to the total number of userlists
-                totalUserlists = totalUserlists + 1
-                
-                ref?.child("Users").child(selectedUser).child("Total_Lists_Created").setValue(totalUserlists)
-                
-                //now share by adding it under their firebase
-                ref?.child("Users").child(selectedUser).child("UserLists").child("UserList_\(totalUserlists)").setValue(desiredList)
-                
-            })
-            
-            
-        }
+      
         
         
         

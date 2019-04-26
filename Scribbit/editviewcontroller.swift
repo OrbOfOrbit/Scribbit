@@ -17,6 +17,8 @@ class neweditController: UITableViewController {
     var listdate = [String]()
     var dataget="List_1"
     override func viewDidLoad() {
+        tableview.backgroundColor = .green
+        view.backgroundColor = .green
         tableView.delegate = self
         tableView.dataSource = self
         let longrecon = UILongPressGestureRecognizer(target: self, action: #selector(longtap))
@@ -27,6 +29,7 @@ class neweditController: UITableViewController {
         tableview.allowsSelectionDuringEditing = true
         ref = Database.database().reference()
         ref?.child("Lists").child(dataget).child("Items").observe(.value, with: {(snapshot) in
+            self.basiclist?.items = [newitem]()
             var stringiterator = "Item_1"
             var i = 1
             while (snapshot.childSnapshot(forPath: stringiterator).exists()){
@@ -119,7 +122,7 @@ class neweditController: UITableViewController {
         
         if indexPath.row != basiclist?.items.count{
             cell.textLabel?.text=basiclist?.items[indexPath.row].value
-            
+            cell.backgroundColor = UIColor.green
             //cell.selectionStyle = UITableViewCellSelectionStyle.none
             if basiclist?.items[indexPath.row].done == false{
                 cell.textLabel?.text?.append("❎")
@@ -257,6 +260,10 @@ class neweditController: UITableViewController {
             ref?.removeAllObservers()
             let snapshot = ref!.child("Lists").child(dataget).child("Items")
             var savestringiterator = "Item_0"
+            if (basiclist?.items.count==0){
+                self.dismiss(animated: true, completion: nil)
+                return
+            }
             for i  in 0...basiclist!.items.count-1{
                 savestringiterator = String(savestringiterator.dropLast())
                 savestringiterator.append(String(i+1))
