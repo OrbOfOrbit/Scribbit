@@ -188,5 +188,7 @@ class ShareListViewController: UIViewController,UITableViewDelegate,UITableViewD
      // Pass the selected object to the new view controller.
      }
      */
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedUser = users[indexPath.row]
+    }
 }

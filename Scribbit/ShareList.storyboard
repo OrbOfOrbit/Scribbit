@@ -36,9 +36,8 @@
                                     <outlet property="delegate" destination="iJA-FN-pQh" id="y2e-uE-h97"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrQ-Gu-N3c">
-                                <rect key="frame" x="333" y="20" width="38" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrQ-Gu-N3c">
+                                <rect key="frame" x="337" y="20" width="38" height="30"/>
                                 <state key="normal" title="share"/>
                                 <connections>
                                     <action selector="share:" destination="iJA-FN-pQh" eventType="touchUpInside" id="0GM-gk-Sf3"/>
@@ -56,7 +55,10 @@
                         <constraints>
                             <constraint firstItem="c2t-QQ-dYG" firstAttribute="top" secondItem="NgN-Fr-88c" secondAttribute="top" constant="30" id="47S-6t-CLE"/>
                             <constraint firstItem="c2t-QQ-dYG" firstAttribute="trailing" secondItem="NgN-Fr-88c" secondAttribute="trailing" id="99z-2R-GsV"/>
+                            <constraint firstItem="xrQ-Gu-N3c" firstAttribute="top" secondItem="NgN-Fr-88c" secondAttribute="top" id="JET-HH-0My"/>
+                            <constraint firstItem="c2t-QQ-dYG" firstAttribute="top" secondItem="xrQ-Gu-N3c" secondAttribute="bottom" id="Kf0-nz-vBg"/>
                             <constraint firstItem="c2t-QQ-dYG" firstAttribute="top" secondItem="W94-Yo-AYM" secondAttribute="bottom" id="Nge-P4-tyd"/>
+                            <constraint firstItem="NgN-Fr-88c" firstAttribute="trailing" secondItem="xrQ-Gu-N3c" secondAttribute="trailing" id="PSj-Wd-4h2"/>
                             <constraint firstItem="NgN-Fr-88c" firstAttribute="bottom" secondItem="c2t-QQ-dYG" secondAttribute="bottom" id="mZw-HB-zMl"/>
                             <constraint firstItem="W94-Yo-AYM" firstAttribute="leading" secondItem="NgN-Fr-88c" secondAttribute="leading" constant="1" id="rpe-pT-ZqG"/>
                             <constraint firstItem="c2t-QQ-dYG" firstAttribute="leading" secondItem="NgN-Fr-88c" secondAttribute="leading" id="up1-d2-EJk"/>

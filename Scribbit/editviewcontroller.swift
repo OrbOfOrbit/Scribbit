@@ -29,7 +29,7 @@ class neweditController: UITableViewController {
         tableview.allowsSelectionDuringEditing = true
         ref = Database.database().reference()
         ref?.child("Lists").child(dataget).child("Items").observe(.value, with: {(snapshot) in
-            self.basiclist?.items = [newitem]()
+          //  self.basiclist?.items = [newitem]()
             var stringiterator = "Item_1"
             var i = 1
             while (snapshot.childSnapshot(forPath: stringiterator).exists()){
@@ -175,6 +175,32 @@ class neweditController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if (indexPath.row != basiclist?.items.count && (basiclist?.items[indexPath.row].type)! == true) {
+            ref?.child("Lists").child(dataget).child("Items").removeAllObservers()
+            ref?.removeAllObservers()
+            let snapshot = ref!.child("Lists").child(dataget).child("Items")
+            var savestringiterator = "Item_0"
+            if (basiclist?.items.count==0){
+                self.dismiss(animated: true, completion: nil)
+                return
+            }
+            for i  in 0...basiclist!.items.count-1{
+                savestringiterator = String(savestringiterator.dropLast())
+                savestringiterator.append(String(i+1))
+                snapshot.child(savestringiterator).child("Name").setValue(basiclist?.items[i].value)
+                if basiclist?.items[i].type == false{
+                    let doneasint = (basiclist?.items[i].done)! ? 1 : 0
+                    //snapshot.child(gamer).child("Done").setValue(result)
+                    let v = "%" + String(doneasint) + "%" + (basiclist?.items[i].stuff.substring(from: (basiclist?.items[i].stuff.index((basiclist?.items[i].stuff.startIndex)!, offsetBy: 3))!))!
+                    snapshot.child(savestringiterator).child("Value").setValue(v)}
+                else {snapshot.child(savestringiterator).child("Value").setValue(basiclist?.items[i].stuff)}
+                let soop = (basiclist?.items[i].type)! ? 1 : 0
+                snapshot.child(savestringiterator).child("Type").setValue(soop)
+                let formatteddate = DateFormatter()
+                formatteddate.dateStyle = .long
+                formatteddate.timeStyle = .long
+                snapshot.child(savestringiterator).child("Last_Edited").setValue(formatteddate.string(from: Date.init()))
+                
+            }
             let board = UIStoryboard(name: "list", bundle: self.nibBundle)
             let controller = board.instantiateInitialViewController() as! neweditController
             controller.dataget=String((basiclist?.items[indexPath.row].stuff)!)
@@ -187,6 +213,7 @@ class neweditController: UITableViewController {
             
         else if indexPath.row != basiclist?.items.count{
             basiclist?.items[indexPath.row].done.toggle()
+            
         }
         else {
             let alert = UIAlertController(title: "add item", message: "", preferredStyle: .alert)
