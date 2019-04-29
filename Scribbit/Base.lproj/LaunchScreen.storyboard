@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Artboard 1STORE.png" translatesAutoresizingMaskIntoConstraints="NO" id="E5F-Nw-1CO">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Artboard 1STORE" translatesAutoresizingMaskIntoConstraints="NO" id="E5F-Nw-1CO">
                                 <rect key="frame" x="87.5" y="233.5" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="GZw-Nh-ntJ"/>
@@ -40,6 +40,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Artboard 1STORE.png" width="1024" height="1024"/>
+        <image name="Artboard 1STORE" width="1024" height="1024"/>
     </resources>
 </document>
