@@ -25,6 +25,7 @@
 		C2730FDD2208BE2A006D3A1B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2730FDB2208BE2A006D3A1B /* GoogleService-Info.plist */; };
 		C2730FDE2208BE2A006D3A1B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2730FDB2208BE2A006D3A1B /* GoogleService-Info.plist */; };
 		C2730FE0220C99D4006D3A1B /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2730FDF220C99D4006D3A1B /* Authentication.storyboard */; };
+		C27C8086227362F400CD1BED /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C27C8085227362F200CD1BED /* SWRevealViewController.m */; };
 		C29A4DAE21EFB1AF0084E5BE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29A4DAD21EFB1AF0084E5BE /* LoginViewController.swift */; };
 		C29A4E2A21F202B20084E5BE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29A4E2921F202B20084E5BE /* SignUpViewController.swift */; };
 		C2D3DA7721DE7D0E009904BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D3DA7621DE7D0E009904BF /* AppDelegate.swift */; };
@@ -71,6 +72,9 @@
 		9EA5559C221F17A600782F16 /* initiatelist.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = initiatelist.storyboard; sourceTree = "<group>"; };
 		C2730FDB2208BE2A006D3A1B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C2730FDF220C99D4006D3A1B /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
+		C27C8083227362F000CD1BED /* Scribbit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Scribbit-Bridging-Header.h"; sourceTree = "<group>"; };
+		C27C8084227362F200CD1BED /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		C27C8085227362F200CD1BED /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		C29A4DAD21EFB1AF0084E5BE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C29A4E2921F202B20084E5BE /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		C2D3DA7321DE7D0E009904BF /* Scribbit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scribbit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -180,6 +184,9 @@
 				C2D3DA8221DE7D10009904BF /* Info.plist */,
 				C2730FDB2208BE2A006D3A1B /* GoogleService-Info.plist */,
 				9EA5559C221F17A600782F16 /* initiatelist.storyboard */,
+				C27C8084227362F200CD1BED /* SWRevealViewController.h */,
+				C27C8085227362F200CD1BED /* SWRevealViewController.m */,
+				C27C8083227362F000CD1BED /* Scribbit-Bridging-Header.h */,
 			);
 			path = Scribbit;
 			sourceTree = "<group>";
@@ -272,6 +279,7 @@
 				TargetAttributes = {
 					C2D3DA7221DE7D0E009904BF = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 1010;
 					};
 					C2D3DA8621DE7D10009904BF = {
 						CreatedOnToolsVersion = 9.4;
@@ -395,6 +403,7 @@
 				C29A4DAE21EFB1AF0084E5BE /* LoginViewController.swift in Sources */,
 				0A7C226A225FB7C000ECA601 /* HomeScreenViewController.swift in Sources */,
 				C2D3DA7921DE7D0E009904BF /* ViewController.swift in Sources */,
+				C27C8086227362F400CD1BED /* SWRevealViewController.m in Sources */,
 				0A7969DA220CAB9100B65D6F /* AuthViewController.swift in Sources */,
 				0AE5D39D2210CEC500E655D4 /* item.swift in Sources */,
 				0A7C226E225FB8FF00ECA601 /* OronTestList.swift in Sources */,
@@ -574,6 +583,7 @@
 			baseConfigurationReference = 917CBED20CCF3966642404EA /* Pods-Scribbit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Scribbit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -582,6 +592,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Urine-Good-Company.Scribbit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Scribbit/Scribbit-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -592,6 +604,7 @@
 			baseConfigurationReference = EA1163831C4B67C19B0ED4E8 /* Pods-Scribbit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Scribbit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -600,6 +613,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Urine-Good-Company.Scribbit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Scribbit/Scribbit-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

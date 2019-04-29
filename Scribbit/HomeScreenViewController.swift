@@ -12,6 +12,7 @@ import FirebaseAuth
 class HomeScreenViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     @IBOutlet weak var listTableView: UITableView!
     
+    @IBOutlet weak var navButton: UIBarButtonItem!
     var listData = [OronTestList]()
     var ref: DatabaseReference?
     var databaseHandle: DatabaseHandle?
@@ -27,6 +28,7 @@ class HomeScreenViewController: UIViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        sideMenus()
         ref = Database.database().reference()
         
         listTableView.delegate = self
@@ -72,7 +74,19 @@ class HomeScreenViewController: UIViewController, UITableViewDelegate, UITableVi
         self.present(controller,animated: false)
     }
     
-    
+    func sideMenus(){
+        
+        if revealViewController() != nil{
+            navButton.target = revealViewController()
+            navButton.action = #selector(SWRevealViewController.revealToggle(_:))
+            revealViewController()?.rearViewRevealWidth = 275
+            revealViewController()?.rightViewRevealWidth = 160
+            
+            view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
+        
+        
+    }
     
     /*
      // MARK: - Navigation

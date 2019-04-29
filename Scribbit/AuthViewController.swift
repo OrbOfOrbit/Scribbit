@@ -42,7 +42,7 @@ class AuthViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         if let _ = Auth.auth().currentUser{
         let board = UIStoryboard(name: "HomeScreenStoryboard", bundle: self.nibBundle)
-        let controller = board.instantiateInitialViewController() as! HomeScreenViewController
+        let controller = board.instantiateInitialViewController() as! SWRevealViewController
             self.present(controller, animated: false)
     }
     }
