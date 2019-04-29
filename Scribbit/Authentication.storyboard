@@ -58,13 +58,24 @@
                                     <segue destination="AGw-Ol-OSH" kind="show" id="ieU-jY-Xq8"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Artboard 1STORE" translatesAutoresizingMaskIntoConstraints="NO" id="KgJ-hG-OxZ">
+                                <rect key="frame" x="87.5" y="120" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="CWN-oV-By8"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="GTu-yu-bKm"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="I3T-0A-4Wg"/>
+                                    <constraint firstAttribute="width" constant="200" id="Qb6-DE-JB0"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.88235294119999996" green="0.95686274510000002" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="KgJ-hG-OxZ" firstAttribute="centerX" secondItem="mS5-ZE-1G0" secondAttribute="centerX" id="2cG-Qh-f6F"/>
                             <constraint firstItem="TRV-vb-kVD" firstAttribute="centerX" secondItem="SFS-Hn-RXC" secondAttribute="centerX" id="NhE-bI-TvB"/>
                             <constraint firstItem="TRV-vb-kVD" firstAttribute="top" secondItem="BB0-9b-h8k" secondAttribute="bottom" constant="50" id="RPW-s1-3WD"/>
                             <constraint firstItem="BB0-9b-h8k" firstAttribute="top" secondItem="mS5-ZE-1G0" secondAttribute="top" constant="450" id="nEt-KR-pYk"/>
                             <constraint firstItem="BB0-9b-h8k" firstAttribute="centerX" secondItem="SFS-Hn-RXC" secondAttribute="centerX" id="tk4-dj-SFy"/>
+                            <constraint firstItem="KgJ-hG-OxZ" firstAttribute="top" secondItem="mS5-ZE-1G0" secondAttribute="top" constant="100" id="uPm-7G-0DP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mS5-ZE-1G0"/>
                     </view>
@@ -259,4 +270,7 @@
             <point key="canvasLocation" x="1470" y="711"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Artboard 1STORE" width="1024" height="1024"/>
+    </resources>
 </document>
