@@ -13,6 +13,9 @@ class SignUpViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var emailAddressTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBAction func goBack(_ sender: Any) {
+        presentingViewController?.dismiss(animated: true, completion: nil)
+    }
     @IBOutlet weak var signUpButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
