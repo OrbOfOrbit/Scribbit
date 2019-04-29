@@ -40,11 +40,11 @@ class HomeScreenViewController: UIViewController, UITableViewDelegate, UITableVi
         let controller = board.instantiateInitialViewController() as! newlistViewController
         self.present(controller, animated: false)
     }
-    func gaming(id:String){
-        let snoshot = ref!.child("Users").child(id)
+    func newuser(id:String){
+        let snapshot = ref!.child("Users").child(id)
         var maxlist = 1
         var stringiterator = "List_1"
-        snoshot.child("Total_Lists_Created").setValue(1)
+        snapshot.child("Total_Lists_Created").setValue(1)
         ref?.child("Lists").observe(.value, with: {(snapshot) in
             
             
@@ -57,7 +57,7 @@ class HomeScreenViewController: UIViewController, UITableViewDelegate, UITableVi
         stringiterator = String(stringiterator.dropLast())
         stringiterator.append(String(maxlist+2))
         
-        snoshot.child("UserLists").child("Userlist_1").setValue(stringiterator)
+        snapshot.child("UserLists").child("Userlist_1").setValue(stringiterator)
         let b = ref?.child("Lists").child(stringiterator)
         b?.child("Name").setValue("welcome to scribbit!")
         let formatteddate = DateFormatter()
@@ -68,9 +68,9 @@ class HomeScreenViewController: UIViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         let longrecon = UILongPressGestureRecognizer(target: self, action: #selector(longtap))
         listTableView.addGestureRecognizer(longrecon)
-        listTableView.backgroundColor = .green 
+        listTableView.backgroundColor = hexStringToUIColor(hex: "53C9F4")
         super.viewDidLoad()
-        view.backgroundColor = .green
+        view.backgroundColor = hexStringToUIColor(hex: "53C9F4")
         ref = Database.database().reference()
         
         listTableView.delegate = self
@@ -83,20 +83,18 @@ class HomeScreenViewController: UIViewController, UITableViewDelegate, UITableVi
                 self.totalUserLists = (snapshot.value as? Int)!
             }
             else {
-                self.gaming(id: id)
+                self.newuser(id: id)
             }
         })
         ref?.child("Users").child(id).child("UserLists").observe(.value, with: {(snapshot) in
             self.listData=[OronTestList]()
             var stringiterator = "UserList_1"
             var i = 1
-            print(snapshot.childSnapshot(forPath: stringiterator).exists())
             while snapshot.childSnapshot(forPath: stringiterator).exists(){
                 let veter = snapshot.childSnapshot(forPath: stringiterator).value as! String
                 
                 let list = OronTestList(veter, listname: veter)
                 self.listData.append(list)
-                print("monky")
                 DispatchQueue.main.async {
                     self.listTableView.reloadData()
                 }
@@ -137,7 +135,7 @@ class HomeScreenViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListTableCell")
-        cell?.backgroundColor = UIColor.green 
+        cell?.backgroundColor = hexStringToUIColor(hex: "53C9F4")
         someMethod(completion: {(gamer) in
             cell?.textLabel?.text = self.nam
         } , i: indexPath.row)
@@ -155,7 +153,6 @@ class HomeScreenViewController: UIViewController, UITableViewDelegate, UITableVi
         
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print (listData[indexPath.row].num)
         let board = UIStoryboard(name: "list", bundle: self.nibBundle)
         let controller = board.instantiateInitialViewController() as! neweditController
         controller.dataget = (listData[indexPath.row].num)

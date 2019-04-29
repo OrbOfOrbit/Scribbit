@@ -20,7 +20,9 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oyj-gU-NoB">
                                 <rect key="frame" x="157.5" y="566" width="60" height="30"/>
-                                <state key="normal" title="New List"/>
+                                <state key="normal" title="New List">
+                                    <color key="titleColor" red="0.95686274509803915" green="0.65098039215686276" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="create:" destination="JQ9-aa-VfJ" eventType="touchUpInside" id="xyn-JA-lwL"/>
                                 </connections>
@@ -38,7 +40,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.32549019607843138" green="0.78823529411764703" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="oyj-gU-NoB" firstAttribute="centerX" secondItem="Ape-um-287" secondAttribute="centerX" id="AMJ-pV-gJD"/>
                             <constraint firstItem="Ape-um-287" firstAttribute="trailing" secondItem="4D3-GE-Igd" secondAttribute="trailing" constant="317" id="N0D-jU-Luu"/>

@@ -11,7 +11,7 @@ class newitem{
     var done:Bool//the value
     var type:Bool//whether or not it is a list or another item.
     var value:String
-    var stuff="gaming"
+    var data="default"
     
     init(newdone:Bool,newtype:Bool,newvalue:String) {
         done = newdone

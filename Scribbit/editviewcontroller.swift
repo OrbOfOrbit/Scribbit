@@ -18,8 +18,8 @@ class neweditController: UITableViewController {
     var dataget="List_1"
     //the code for initializing the gesture recognizer, all background elements and the table view go here
     override func viewDidLoad() {
-        tableview.backgroundColor = .green
-        view.backgroundColor = .green
+        tableview.backgroundColor = hexStringToUIColor(hex: "53C9F4")
+        view.backgroundColor = hexStringToUIColor(hex: "53C9F4")
         tableView.delegate = self
         tableView.dataSource = self
         let longrecon = UILongPressGestureRecognizer(target: self, action: #selector(longtap))
@@ -44,7 +44,7 @@ class neweditController: UITableViewController {
                 else {isdone = false}
                 
                 let additem = newitem(newdone: isdone, newtype: (snapshot.childSnapshot(forPath: stringiterator).childSnapshot(forPath: "Type").value as? Bool)!, newvalue: (snapshot.childSnapshot(forPath: stringiterator).childSnapshot(forPath: "Name").value as? String)!)
-                additem.stuff = (snapshot.childSnapshot(forPath: stringiterator).childSnapshot(forPath: "Value").value as? String)!
+                additem.data = (snapshot.childSnapshot(forPath: stringiterator).childSnapshot(forPath: "Value").value as? String)!
                 self.basiclist?.items.append(additem)
                 
                 
@@ -125,7 +125,7 @@ class neweditController: UITableViewController {
         
         if indexPath.row != basiclist?.items.count{
             cell.textLabel?.text=basiclist?.items[indexPath.row].value
-            cell.backgroundColor = UIColor.green
+            cell.backgroundColor = hexStringToUIColor(hex: "53C9F4")
             //cell.selectionStyle = UITableViewCellSelectionStyle.none
             if basiclist?.items[indexPath.row].done == false{
                 cell.textLabel?.text?.append("❎")
@@ -197,9 +197,9 @@ class neweditController: UITableViewController {
                 if basiclist?.items[i].type == false{
                     let doneasint = (basiclist?.items[i].done)! ? 1 : 0
                     //snapshot.child(gamer).child("Done").setValue(result)
-                    let v = "%" + String(doneasint) + "%" + (basiclist?.items[i].stuff.substring(from: (basiclist?.items[i].stuff.index((basiclist?.items[i].stuff.startIndex)!, offsetBy: 3))!))!
+                    let v = "%" + String(doneasint) + "%" + (basiclist?.items[i].data.substring(from: (basiclist?.items[i].data.index((basiclist?.items[i].data.startIndex)!, offsetBy: 3))!))!
                     snapshot.child(savestringiterator).child("Value").setValue(v)}
-                else {snapshot.child(savestringiterator).child("Value").setValue(basiclist?.items[i].stuff)}
+                else {snapshot.child(savestringiterator).child("Value").setValue(basiclist?.items[i].data)}
                 let soop = (basiclist?.items[i].type)! ? 1 : 0
                 snapshot.child(savestringiterator).child("Type").setValue(soop)
                 let formatteddate = DateFormatter()
@@ -210,7 +210,7 @@ class neweditController: UITableViewController {
             }
             let board = UIStoryboard(name: "list", bundle: self.nibBundle)
             let controller = board.instantiateInitialViewController() as! neweditController
-            controller.dataget=String((basiclist?.items[indexPath.row].stuff)!)
+            controller.dataget=String((basiclist?.items[indexPath.row].data)!)
             ref?.child("Lists").child(dataget).child("Items").removeAllObservers()
             basiclist = newlist(newitems: [newitem](), newtitle: "", newcreated: Date.init())
             self.present(controller,animated: true)
@@ -246,7 +246,7 @@ class neweditController: UITableViewController {
                         
                         editstringiterator = String(editstringiterator.dropLast())
                         editstringiterator.append(String(i))
-                        b.stuff=editstringiterator
+                        b.data=editstringiterator
                     }
                     
                     
@@ -262,7 +262,7 @@ class neweditController: UITableViewController {
                     rev.child("Lists").child("Total_Lists_Created").setValue(l)
                     
                 })
-                b.stuff=editstringiterator
+                b.data=editstringiterator
                 self.basiclist?.items.append(b)
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
@@ -307,9 +307,9 @@ class neweditController: UITableViewController {
                 if basiclist?.items[i].type == false{
                     let doneasint = (basiclist?.items[i].done)! ? 1 : 0
                     //snapshot.child(gamer).child("Done").setValue(result)
-                    let v = "%" + String(doneasint) + "%" + (basiclist?.items[i].stuff.substring(from: (basiclist?.items[i].stuff.index((basiclist?.items[i].stuff.startIndex)!, offsetBy: 3))!))!
+                    let v = "%" + String(doneasint) + "%" + (basiclist?.items[i].data.substring(from: (basiclist?.items[i].data.index((basiclist?.items[i].data .startIndex)!, offsetBy: 3))!))!
                     snapshot.child(savestringiterator).child("Value").setValue(v)}
-                else {snapshot.child(savestringiterator).child("Value").setValue(basiclist?.items[i].stuff)}
+                else {snapshot.child(savestringiterator).child("Value").setValue(basiclist?.items[i].data)}
                 let soop = (basiclist?.items[i].type)! ? 1 : 0
                 snapshot.child(savestringiterator).child("Type").setValue(soop)
                 let formatteddate = DateFormatter()

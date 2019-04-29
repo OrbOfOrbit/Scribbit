@@ -17,8 +17,6 @@ class newlistViewController: UIViewController {
     let id = (Auth.auth().currentUser?.uid)!
     @IBAction func create(_ sender: UIButton) {
         getnumber(completion: {(l) in
-    
-            print(self.stringiterator)
             self.getlist(completion: {(p) in
        
                 self.ref?.child("Lists").child(self.stringiterator).child("Name").setValue(self.textfield.text ?? "untitled list")
@@ -51,7 +49,6 @@ class newlistViewController: UIViewController {
     func getnumber (completion: @escaping (Bool) -> ()){
         
         ref!.child("Lists").observeSingleEvent(of:.value, with: {(snapshot) in
-            print(snapshot.exists())
             while (snapshot.childSnapshot(forPath: self.stringiterator).exists()){
                 self.num = self.num + 1
                 self.stringiterator = String(self.stringiterator.dropLast())
@@ -60,8 +57,8 @@ class newlistViewController: UIViewController {
             }
             completion(true)
         })
-        print("s")
-        print(stringiterator)
+
+
         
         
     }
@@ -77,7 +74,6 @@ class newlistViewController: UIViewController {
             }
             completion(true)
         })
-        print("n")
         
         
     }
