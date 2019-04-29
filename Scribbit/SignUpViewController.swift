@@ -47,6 +47,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate{
                 })
                var id = Auth.auth().currentUser?.uid
                 ref?.child("Users").child(id!).child("Name").setValue(userName)
+                ref?.child("Users").child(id!).child("Total_Lists_Created").setValue(1)
                 self.dismiss(animated: true, completion: nil)
             }
                 
