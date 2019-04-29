@@ -12,6 +12,7 @@
 		0A21BFFC2272575A00650A0C /* newlist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A21BFFB2272575A00650A0C /* newlist.storyboard */; };
 		0A21BFFE2272583C00650A0C /* ShareListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A21BFFD2272583C00650A0C /* ShareListViewController.swift */; };
 		0A21C0022272588300650A0C /* ShareList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A21C0012272588300650A0C /* ShareList.storyboard */; };
+		0A49018D2276A44100B57B6D /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A49018C2276A44100B57B6D /* TextField.swift */; };
 		0A7969DA220CAB9100B65D6F /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7969D9220CAB9100B65D6F /* AuthViewController.swift */; };
 		0A7C2268225E58EF00ECA601 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7C2267225E58EF00ECA601 /* SettingsViewController.swift */; };
 		0A7C226A225FB7C000ECA601 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7C2269225FB7C000ECA601 /* HomeScreenViewController.swift */; };
@@ -62,6 +63,7 @@
 		0A21BFFB2272575A00650A0C /* newlist.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = newlist.storyboard; sourceTree = "<group>"; };
 		0A21BFFD2272583C00650A0C /* ShareListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareListViewController.swift; sourceTree = "<group>"; };
 		0A21C0012272588300650A0C /* ShareList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShareList.storyboard; sourceTree = "<group>"; };
+		0A49018C2276A44100B57B6D /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		0A7969D9220CAB9100B65D6F /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		0A7C2267225E58EF00ECA601 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0A7C2269225FB7C000ECA601 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				0AE5D3982210CEC500E655D4 /* item.swift */,
 				0AE5D3A02210D3CA00E655D4 /* editviewcontroller.swift */,
 				0AE5D39A2210CEC500E655D4 /* list.storyboard */,
+				0A49018C2276A44100B57B6D /* TextField.swift */,
 				0AE5D3962210CEC400E655D4 /* list.swift */,
 				0A21BFF92272571D00650A0C /* newlistViewController.swift */,
 				0A21BFFB2272575A00650A0C /* newlist.storyboard */,
@@ -401,6 +404,7 @@
 				0AE5D3A12210D3CA00E655D4 /* editviewcontroller.swift in Sources */,
 				0AE5D39B2210CEC500E655D4 /* list.swift in Sources */,
 				0A7C2268225E58EF00ECA601 /* SettingsViewController.swift in Sources */,
+				0A49018D2276A44100B57B6D /* TextField.swift in Sources */,
 				0ACCE1CA222637390062C0EC /* AllListsViewController.swift in Sources */,
 				C29A4DAE21EFB1AF0084E5BE /* LoginViewController.swift in Sources */,
 				0A21BFFE2272583C00650A0C /* ShareListViewController.swift in Sources */,

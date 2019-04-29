@@ -20,7 +20,8 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c2t-QQ-dYG">
                                 <rect key="frame" x="0.0" y="50" width="375" height="617"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.88235294119999996" green="0.95686274510000002" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="separatorColor" red="0.95686274510000002" green="0.65098039220000004" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="shamer" id="kwN-lI-LTq">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -29,6 +30,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.88235294119999996" green="0.95686274510000002" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -38,27 +40,34 @@
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrQ-Gu-N3c">
                                 <rect key="frame" x="337" y="20" width="38" height="30"/>
-                                <state key="normal" title="share"/>
+                                <state key="normal" title="share">
+                                    <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="share:" destination="iJA-FN-pQh" eventType="touchUpInside" id="0GM-gk-Sf3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W94-Yo-AYM">
                                 <rect key="frame" x="1" y="20" width="45" height="30"/>
-                                <state key="normal" title="cancel"/>
+                                <state key="normal" title="cancel">
+                                    <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="cancel:" destination="iJA-FN-pQh" eventType="touchUpInside" id="2td-ya-sZa"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.95686274510000002" green="0.65098039220000004" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="xrQ-Gu-N3c" firstAttribute="leading" secondItem="W94-Yo-AYM" secondAttribute="trailing" constant="291" id="3Gh-Fd-bXB"/>
                             <constraint firstItem="c2t-QQ-dYG" firstAttribute="top" secondItem="NgN-Fr-88c" secondAttribute="top" constant="30" id="47S-6t-CLE"/>
                             <constraint firstItem="c2t-QQ-dYG" firstAttribute="trailing" secondItem="NgN-Fr-88c" secondAttribute="trailing" id="99z-2R-GsV"/>
+                            <constraint firstItem="W94-Yo-AYM" firstAttribute="top" secondItem="NgN-Fr-88c" secondAttribute="top" id="Ibp-lG-FYt"/>
                             <constraint firstItem="xrQ-Gu-N3c" firstAttribute="top" secondItem="NgN-Fr-88c" secondAttribute="top" id="JET-HH-0My"/>
                             <constraint firstItem="c2t-QQ-dYG" firstAttribute="top" secondItem="xrQ-Gu-N3c" secondAttribute="bottom" id="Kf0-nz-vBg"/>
                             <constraint firstItem="c2t-QQ-dYG" firstAttribute="top" secondItem="W94-Yo-AYM" secondAttribute="bottom" id="Nge-P4-tyd"/>
                             <constraint firstItem="NgN-Fr-88c" firstAttribute="trailing" secondItem="xrQ-Gu-N3c" secondAttribute="trailing" id="PSj-Wd-4h2"/>
+                            <constraint firstItem="xrQ-Gu-N3c" firstAttribute="trailing" secondItem="NgN-Fr-88c" secondAttribute="trailing" id="Skw-38-UKt"/>
                             <constraint firstItem="NgN-Fr-88c" firstAttribute="bottom" secondItem="c2t-QQ-dYG" secondAttribute="bottom" id="mZw-HB-zMl"/>
                             <constraint firstItem="W94-Yo-AYM" firstAttribute="leading" secondItem="NgN-Fr-88c" secondAttribute="leading" constant="1" id="rpe-pT-ZqG"/>
                             <constraint firstItem="c2t-QQ-dYG" firstAttribute="leading" secondItem="NgN-Fr-88c" secondAttribute="leading" id="up1-d2-EJk"/>

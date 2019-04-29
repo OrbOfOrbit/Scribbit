@@ -68,9 +68,9 @@ class HomeScreenViewController: UIViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         let longrecon = UILongPressGestureRecognizer(target: self, action: #selector(longtap))
         listTableView.addGestureRecognizer(longrecon)
-        listTableView.backgroundColor = .green 
+//        listTableView.backgroundColor = .green
         super.viewDidLoad()
-        view.backgroundColor = .green
+//        view.backgroundColor = .green
         ref = Database.database().reference()
         
         listTableView.delegate = self
@@ -137,7 +137,7 @@ class HomeScreenViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListTableCell")
-        cell?.backgroundColor = UIColor.green 
+//        cell?.backgroundColor = UIColor.green
         someMethod(completion: {(gamer) in
             cell?.textLabel?.text = self.nam
         } , i: indexPath.row)

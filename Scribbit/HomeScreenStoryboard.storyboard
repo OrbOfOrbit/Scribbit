@@ -23,7 +23,13 @@
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="STG-4h-3q5">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="607"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.88235294119999996" green="0.95686274510000002" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="607" id="7Ve-Ia-nCR"/>
+                                            <constraint firstAttribute="width" constant="375" id="n9O-DB-gT6"/>
+                                        </constraints>
+                                        <color key="separatorColor" red="0.95686274510000002" green="0.65098039220000004" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="sectionIndexBackgroundColor" red="0.88235294119999996" green="0.95686274510000002" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListTableCell" id="jxA-vh-p7N" customClass="AllLIstsViewController" customModule="Scribbit" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -32,36 +38,64 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </tableViewCellContentView>
+                                                <color key="backgroundColor" red="0.88235294119999996" green="0.95686274510000002" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
                                 </subviews>
+                                <color key="backgroundColor" red="0.88235294119999996" green="0.95686274510000002" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="STG-4h-3q5" secondAttribute="bottom" id="gO2-9A-UfS"/>
+                                    <constraint firstItem="STG-4h-3q5" firstAttribute="leading" secondItem="udI-Ql-VSd" secondAttribute="leading" id="rYM-PC-uMd"/>
+                                    <constraint firstAttribute="trailing" secondItem="STG-4h-3q5" secondAttribute="trailing" id="rtb-ZQ-Sfy"/>
+                                </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQb-7C-7mc">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bQb-7C-7mc">
                                 <rect key="frame" x="22" y="35" width="55" height="30"/>
-                                <state key="normal" title="Log Out"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Log Out">
+                                            <attributes>
+                                                <color key="NSColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="15" name="LucidaGrande"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
                                 <connections>
                                     <action selector="signOut:" destination="R8q-35-w0U" eventType="touchUpInside" id="XJa-LC-nSw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E2g-jo-evH">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E2g-jo-evH">
                                 <rect key="frame" x="310" y="35" width="52" height="30"/>
-                                <state key="normal" title="new list"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="new list">
+                                            <attributes>
+                                                <color key="NSColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" metaFont="system" size="15"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
                                 <connections>
                                     <action selector="newlist:" destination="R8q-35-w0U" eventType="touchUpInside" id="CSB-G3-yho"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.95686274510000002" green="0.65098039220000004" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="udI-Ql-VSd" firstAttribute="leading" secondItem="nmq-CY-6jL" secondAttribute="leading" id="887-BD-RvS"/>
+                            <constraint firstItem="STG-4h-3q5" firstAttribute="top" secondItem="E2g-jo-evH" secondAttribute="bottom" constant="-5" id="Ejb-aB-Z7V"/>
                             <constraint firstItem="nmq-CY-6jL" firstAttribute="trailing" secondItem="E2g-jo-evH" secondAttribute="trailing" constant="13" id="JVZ-Et-u2b"/>
                             <constraint firstItem="E2g-jo-evH" firstAttribute="top" secondItem="nmq-CY-6jL" secondAttribute="top" constant="15" id="TuO-tc-fIV"/>
                             <constraint firstItem="nmq-CY-6jL" firstAttribute="trailing" secondItem="udI-Ql-VSd" secondAttribute="trailing" id="WZX-rG-4Ni"/>
+                            <constraint firstItem="STG-4h-3q5" firstAttribute="top" secondItem="bQb-7C-7mc" secondAttribute="bottom" constant="-5" id="XvH-kb-phz"/>
                             <constraint firstItem="E2g-jo-evH" firstAttribute="leading" secondItem="bQb-7C-7mc" secondAttribute="trailing" constant="233" id="bwl-xd-UmQ"/>
                             <constraint firstItem="bQb-7C-7mc" firstAttribute="top" secondItem="nmq-CY-6jL" secondAttribute="top" constant="15" id="gyT-UO-4Bm"/>
                             <constraint firstItem="udI-Ql-VSd" firstAttribute="top" secondItem="nmq-CY-6jL" secondAttribute="top" constant="40" id="sps-e7-6O1"/>
                             <constraint firstItem="udI-Ql-VSd" firstAttribute="bottom" secondItem="nmq-CY-6jL" secondAttribute="bottom" id="uQq-jS-jFW"/>
+                            <constraint firstItem="bQb-7C-7mc" firstAttribute="leading" secondItem="nmq-CY-6jL" secondAttribute="leading" constant="22" id="ygs-tr-W6E"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nmq-CY-6jL"/>
                     </view>
