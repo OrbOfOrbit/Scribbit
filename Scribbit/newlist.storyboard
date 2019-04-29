@@ -18,38 +18,74 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oyj-gU-NoB">
-                                <rect key="frame" x="157.5" y="566" width="60" height="30"/>
-                                <state key="normal" title="New List">
-                                    <color key="titleColor" red="0.95686274509803915" green="0.65098039215686276" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oyj-gU-NoB">
+                                <rect key="frame" x="87.5" y="546" width="200" height="50"/>
+                                <color key="backgroundColor" red="0.95686274510000002" green="0.65098039220000004" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="sHF-Rr-gNb"/>
+                                    <constraint firstAttribute="width" constant="200" id="zgM-0u-TMU"/>
+                                </constraints>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Create New List">
+                                            <attributes>
+                                                <color key="NSColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="16" name="LucidaGrande"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="create:" destination="JQ9-aa-VfJ" eventType="touchUpInside" id="xyn-JA-lwL"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fUj-NI-v82">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fUj-NI-v82">
                                 <rect key="frame" x="0.0" y="75" width="375" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="cv2-ls-Zoh"/>
+                                    <constraint firstAttribute="height" constant="30" id="zZZ-z7-PBY"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="New List Title">
+                                        <attributes>
+                                            <color key="NSColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" metaFont="smallSystem"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4D3-GE-Igd">
-                                <rect key="frame" x="24" y="46" width="34" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4D3-GE-Igd">
+                                <rect key="frame" x="26" y="46" width="32" height="20"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Title">
+                                        <attributes>
+                                            <color key="NSColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="17" name="LucidaGrande"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <color key="highlightedColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.32549019607843138" green="0.78823529411764703" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.88235294117647056" green="0.95686274509803915" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="oyj-gU-NoB" firstAttribute="centerX" secondItem="Ape-um-287" secondAttribute="centerX" id="AMJ-pV-gJD"/>
+                            <constraint firstItem="Ape-um-287" firstAttribute="bottom" secondItem="fUj-NI-v82" secondAttribute="bottom" constant="562" id="5uM-kD-oLJ"/>
+                            <constraint firstItem="oyj-gU-NoB" firstAttribute="centerX" secondItem="fUj-NI-v82" secondAttribute="centerX" id="7Vg-lK-818"/>
+                            <constraint firstItem="4D3-GE-Igd" firstAttribute="leading" secondItem="Ape-um-287" secondAttribute="leading" constant="26" id="7WK-ec-MWI"/>
+                            <constraint firstItem="Ape-um-287" firstAttribute="bottom" secondItem="oyj-gU-NoB" secondAttribute="bottom" constant="71" id="Dso-wZ-t9u"/>
                             <constraint firstItem="Ape-um-287" firstAttribute="trailing" secondItem="4D3-GE-Igd" secondAttribute="trailing" constant="317" id="N0D-jU-Luu"/>
-                            <constraint firstItem="fUj-NI-v82" firstAttribute="top" secondItem="Ape-um-287" secondAttribute="top" constant="55" id="NV1-KS-bym"/>
-                            <constraint firstItem="oyj-gU-NoB" firstAttribute="top" secondItem="fUj-NI-v82" secondAttribute="bottom" constant="461" id="P6j-aT-DVr"/>
-                            <constraint firstItem="fUj-NI-v82" firstAttribute="leading" secondItem="Ape-um-287" secondAttribute="leading" id="ViK-uA-c3k"/>
                             <constraint firstItem="4D3-GE-Igd" firstAttribute="top" secondItem="Ape-um-287" secondAttribute="top" constant="26" id="Xu8-AE-lPN"/>
-                            <constraint firstItem="Ape-um-287" firstAttribute="bottom" secondItem="oyj-gU-NoB" secondAttribute="bottom" constant="71" id="tww-0h-aXu"/>
-                            <constraint firstItem="Ape-um-287" firstAttribute="trailing" secondItem="fUj-NI-v82" secondAttribute="trailing" id="wsD-1G-WjQ"/>
+                            <constraint firstItem="fUj-NI-v82" firstAttribute="top" secondItem="4D3-GE-Igd" secondAttribute="bottom" constant="9" id="jD3-gk-ZCl"/>
+                            <constraint firstItem="fUj-NI-v82" firstAttribute="centerX" secondItem="IbR-sU-U4f" secondAttribute="centerX" id="mde-MG-cGA"/>
+                            <constraint firstItem="fUj-NI-v82" firstAttribute="top" secondItem="Ape-um-287" secondAttribute="top" constant="55" id="yKe-z4-pNo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ape-um-287"/>
                     </view>

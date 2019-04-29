@@ -8,7 +8,7 @@
 import UIKit
 import FirebaseDatabase
 import FirebaseAuth
-class newlistViewController: UIViewController {
+class newlistViewController: UIViewController, UITextFieldDelegate {
     var ref:DatabaseReference?
     var num = 1
     var totallist=1
@@ -81,6 +81,8 @@ class newlistViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()
+        
+        textfield.delegate = self
         // Do any additional setup after loading the view.
     }
     
@@ -93,5 +95,19 @@ class newlistViewController: UIViewController {
      // Pass the selected object to the new view controller.
      }
      */
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        textField.resignFirstResponder()
+        //or
+        //self.view.endEditing(true)
+        return true
+        
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+    
+        textField.becomeFirstResponder()
+    }
     
 }
